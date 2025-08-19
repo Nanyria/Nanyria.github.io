@@ -9,7 +9,17 @@ body, html{
     height: 100%;
     font-family:Arial, Helvetica, sans-serif;
     background-color: lightgray;
+    /* Hide scrollbars globally for all elements */
+    scrollbar-width: none; /* Firefox */
+    -ms-overflow-style: none; /* Internet Explorer 10+ */
 }
+
+/* Hide scrollbar for webkit browsers globally */
+body::-webkit-scrollbar,
+*::-webkit-scrollbar {
+    display: none;
+}
+
   body{
   
     min-height: 100%;
@@ -40,9 +50,31 @@ body, html{
     justify-content: center;
     align-content: center;
     text-align: center;
-
-
   }
+
+ .infoContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 90%;
+    height: 90%;
+    padding: 10px;
+    background-color: rgba(255, 255, 255, 0.4);
+    border-radius: 8px;
+    box-shadow: 0 0 10 rgb(0, 0, 1);
+    box-sizing: border-box;
+    margin: 0 auto; /* Centers horizontally */
+    position: absolute; /* Enable absolute positioning */
+    top: 50%; /* Move to vertical center */
+    left: 50%; /* Move to horizontal center */
+    transform: translate(-50%, -50%); /* Offset by half width/height to true center */
+    overflow-x: auto; /* Enable horizontal scrolling for container */
+    overflow-y: auto; /* Hide vertical scrolling */
+    max-width: 100vw; /* Ensures container doesn't exceed viewport width */
+    max-height: 100vh; /* Ensures container doesn't exceed viewport height */
+ }
+  
   #clock {
     font-size: 10px;
     font-weight: bold;
@@ -76,7 +108,7 @@ body, html{
     box-sizing: border-box;
     display: flex;
     flex-direction: row;
-    
+
   }
   .box {
     background-color: rgba(255, 255, 255, 0.5);
@@ -90,14 +122,176 @@ body, html{
     align-content: center;
     display: flex;
     flex-flow: column wrap;
+    position: relative; /* Enable absolute positioning for child elements */
+  }
+
+  /* Universal content area styling for all boxes */
+  .boxContent {
+    height: calc(100% - 30px); /* Account for h3 header space */
+    overflow-y: auto; /* Allow scrolling for all content areas */
+    position: relative;
+  }
 
 
+  .box > form {
+    position: absolute;
+    border-radius: 8px;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: rgba(255, 255, 255, 0.568);
+    padding: 8px;
+    margin: 0;
+    z-index: 10;
+    
+  }
+
+  #weatherContent {
+    font-size: 0.85em;
+    line-height: 1.2;
+  }
+
+  #weatherContent h4 {
+    font-size: 1.1em;
+    margin: 0 0 8px 0 !important;
+  }
+
+  #weatherContent p {
+    font-size: 0.9em;
+    margin: 3px 0 !important;
+  }
+
+  #weatherContent div {
+    margin-bottom: 10px !important;
+    padding: 4px !important;
+  }
+
+  #weatherContent strong {
+    font-size: 1.1em;
+  }
+
+  /* City name clickable styling */
+  #cityName:hover {
+    color: #555 !important;
+    text-decoration: underline !important;
+  }
+
+  /* City selector styling */
+  #citySelector {
+    font-size: 0.9em;
+    padding: 3px;
+    margin: 3px;
+  }
+
+  #selectCityBtn, #cancelCityBtn {
+    font-size: 0.8em;
+    padding: 3px 8px;
+    margin: 2px;
+    cursor: pointer;
+  }
+
+  /* Weather content layout classes */
+  .weather-container {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    font-size: 0.8em;
+  }
+
+  .weather-city-name {
+    margin: 0 0 8px 0;
+    color: #333;
+    cursor: pointer;
+    text-decoration: underline;
+    font-size: 1em;
+    text-align: center;
+  }
+
+  .weather-today-section {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 2px;
+    padding: 2px;
+    background: rgba(255,255,255,0.1);
+    border-radius: 3px;
+    gap: 3px;
+  }
+
+  .weather-today-left {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .weather-today-right {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-width: 50px;
+  }
+
+  .weather-day-section {
+    margin-bottom: 8px;
+    padding: 6px;
+    background: rgba(255,255,255,0.1);
+    border-radius: 5px;
+  }
+
+  .weather-day-section.tomorrow {
+    background: rgba(255,255,255,0.05);
+  }
+
+  .weather-day-title {
+    margin: 0 0 4px 0;
+    font-weight: bold;
+    color: #444;
+    font-size: 0.9em;
+  }
+
+  .weather-temperature-main {
+    margin: 0;
+    font-size: 1.4em;
+    font-weight: bold;
+    color: #333;
+    text-align: center;
+  }
+
+  .weather-description {
+    margin: 2px 0;
+    font-size: 0.85em;
+  }
+
+  .weather-detail {
+    margin: 2px 0;
+    font-size: 0.75em;
+    color: #555;
+  }
+
+  .city-selector-container {
+    text-align: center;
+    padding: 10px;
+  }
+
+  .city-selector-prompt {
+    margin: 0 0 10px 0;
+  }
+
+  .city-selector-dropdown {
+    padding: 5px;
+    margin: 5px;
+  }
+
+  .city-selector-btn {
+    padding: 5px 10px;
+    margin: 5px;
+    cursor: pointer;
   }
   .box h3{
     width: 160px;
     height: 20px;
     opacity:1;
-    margin: 10px auto;
+    margin: 5px;
     border-radius: 3px;
     box-shadow: 0 0 10 rgb(0, 0, 1);
     box-sizing: border-box;
@@ -105,6 +299,53 @@ body, html{
     flex-wrap: wrap;
     justify-content: center;
     align-content: center;
+    position: relative;
+  }
+
+  /* Add button styling */
+  .add-btn {
+    position: absolute;
+    right: 5px;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(255, 255, 255, 0.8);
+    border: 1px solid #ccc;
+    border-radius: 50%;
+    width: 20px;
+    height: 20px;
+    font-size: 14px;
+    font-weight: bold;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    line-height: 1;
+  }
+
+  .add-btn:hover {
+    background: rgba(255, 255, 255, 1);
+    transform: translateY(-50%) scale(1.1);
+  }
+
+  /* Form buttons styling */
+  .form-buttons {
+    display: flex;
+    gap: 5px;
+    margin-top: 5px;
+  }
+
+  .form-buttons button {
+    flex: 1;
+    padding: 4px 8px;
+    font-size: 0.8em;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    cursor: pointer;
+    background: rgba(255, 255, 255, 0.8);
+  }
+
+  .form-buttons button:hover {
+    background: rgba(255, 255, 255, 1);
   }
   .box ul {
     
@@ -122,7 +363,54 @@ body, html{
     box-sizing: border-box;
     display: flex;
     flex-direction: column wrap;
+    padding: 5px;
+  }
 
+  /* Link container styling */
+  .link-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+  }
+
+  .link-container a {
+    flex: 1;
+    text-decoration: none;
+    color: #333;
+    font-size: 0.85em;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+
+  .link-container a:hover {
+    text-decoration: underline;
+  }
+
+  /* Delete button styling */
+  .delete-link-btn {
+    background: #ff6b6b;
+    border: 1px solid #ff5252;
+    border-radius: 50%;
+    width: 18px;
+    height: 18px;
+    font-size: 12px;
+    font-weight: bold;
+    color: white;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    line-height: 1;
+    flex-shrink: 0;
+    margin-left: 5px;
+  }
+
+  .delete-link-btn:hover {
+    background: #ff5252;
+    transform: scale(1.1);
   }
   .footer {
     background-color: rgba(255, 255, 255, 0.5);
@@ -146,4 +434,163 @@ body, html{
     font-stretch: expanded;
     cursor: pointer;
     font-weight: bold;
+  }
+
+  /* Quote of the Day styling */
+  .quote-container {
+    padding: 10px;
+    text-align: center;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .quote-text {
+    font-style: italic;
+    font-size: 0.95em;
+    line-height: 1.4;
+    margin: 0 0 15px 0;
+    padding: 0;
+    color: #333;
+    border: none;
+    background: none;
+  }
+
+  .quote-author {
+    font-size: 0.85em;
+    color: #666;
+    font-weight: bold;
+    margin: 10px 0;
+    display: block;
+  }
+
+  .refresh-quote-btn {
+    background: rgba(255, 255, 255, 0.7);
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    padding: 5px 8px;
+    cursor: pointer;
+    font-size: 1em;
+    margin: 10px auto 0;
+    width: fit-content;
+    transition: background-color 0.2s;
+  }
+
+  .refresh-quote-btn:hover {
+    background: rgba(255, 255, 255, 0.9);
+    transform: scale(1.1);
+  }
+
+  /* Notes functionality styling - Simple textarea */
+  #notesContainer {
+    display: flex;
+    flex-direction: column;
+  }
+
+  #notesTextarea {
+    width: 100%;
+    height: 100%;
+    flex: 1;
+    padding: 10px;
+    border: 1px solid rgba(0,0,0,0.2);
+    border-radius: 5px;
+    background: rgba(255, 255, 255, 0.9);
+    font-family: inherit;
+    font-size: 0.9em;
+    line-height: 1.4;
+    resize: none;
+    box-sizing: border-box;
+    outline: none;
+  }
+
+  #notesTextarea:focus {
+    border-color: rgba(0,0,0,0.4);
+    background: rgba(255, 255, 255, 0.95);
+  }
+
+  #notesTextarea::placeholder {
+    color: #999;
+    font-style: italic;
+  }
+
+  /* Custom Scroll Arrow System */
+  /* Create a scrollable container wrapper */
+  .scrollable-container {
+    position: relative;
+  }
+
+  /* Scroll arrows - hidden by default */
+  .scroll-arrow {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 20px;
+    height: 20px;
+    background: rgba(255, 255, 255, 0.9);
+    border: 1px solid #ccc;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    z-index: 100;
+    font-size: 12px;
+    font-weight: bold;
+    color: #333;
+    user-select: none;
+  }
+
+  .scroll-arrow:hover {
+    background: rgba(255, 255, 255, 1);
+    transform: translateX(-50%) scale(1.1);
+  }
+
+  .scroll-arrow-up {
+    top: 5px;
+  }
+
+  .scroll-arrow-down {
+    bottom: 5px;
+  }
+
+  /* Show arrows on hover of parent container */
+  .scrollable-container:hover .scroll-arrow {
+    opacity: 1;
+  }
+
+  /* Apply scrollable container behavior to boxes and infoContainer */
+  .box:hover .scroll-arrow,
+  .infoContainer:hover .scroll-arrow,
+  .container:hover .scroll-arrow {
+    opacity: 1;
+  }
+
+  /* Add scroll arrows to boxes containing scrollable content */
+  .box .scroll-arrow-up {
+    top: 35px; /* Account for h3 header */
+  }
+
+  .box .scroll-arrow-down {
+    bottom: 10px;
+  }
+
+  /* Horizontal scroll arrows for container */
+  .scroll-arrow-left {
+    top: 50%;
+    left: 10px;
+    transform: translate(0, -50%);
+  }
+
+  .scroll-arrow-right {
+    top: 50%;
+    right: 10px;
+    left: auto;
+    transform: translate(0, -50%);
+  }
+
+  .scroll-arrow-left:hover,   .scroll-arrow-right:hover {
+    transform: translate(0, -50%) scale(1.1);
   }

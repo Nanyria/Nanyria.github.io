@@ -1,0 +1,17 @@
+# GitHub Pages configuration
+# This helps ensure proper building and deployment
+
+# Disable Jekyll processing for plain HTML/CSS/JS sites
+plugins: []
+markdown: kramdown
+highlighter: rouge
+
+# Include CSS and JS files
+include:
+  - CSS
+  - JavaScript
+
+# Exclude unnecessary files
+exclude:
+  - README.md
+  - .gitignore

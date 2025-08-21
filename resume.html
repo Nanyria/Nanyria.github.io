@@ -3,8 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="CSS/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Aboreto&family=Poppins&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="CSS/resume.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <script src="JavaScript/resume.js"></script>
     <title>Resume - Nathalee Wilund</title>
 </head>
@@ -17,39 +20,77 @@
                 <!-- Top Section with Contact and Picture -->
                 <div class="sidebar-top">
                     <div class="contact-section">
-                        <h1 class="resume-name">Nathalee Wilund</h1>
-                        <div class="resume-contact">
-                            <span>📧 nathaleewi@hotmail.com</span>
-                            <span>📱 (+46) 727032703</span>
-                            <span>🌐 portfolio.example.com</span>
-                            <span>💼 LinkedIn Profile</span>
+                        <div class="contact-header">
+                            <h1 class="resume-name aboreto-regular">Nathalee Wilund</h1>
+                            <p class="resume-title">Full-Stack Developer | Educator Turned Tech Professional</p>
                         </div>
+                        <div class="resume-contact">
+                            <div class="contact-info">
+                                <span><i class="fas fa-envelope"></i> nathaleewi@hotmail.com</span>
+                                <span><i class="fas fa-phone"></i> (+46) 727032703</span>
+                            </div>
+                            <div class="social-links">
+                                <span><a href="https://www.linkedin.com/in/nathalee-wilund-048bab143" target="_blank"><i class="fab fa-linkedin"></i></a></span>
+                                <span><a href="https://github.com/Nanyria" target="_blank"><i class="fa-brands fa-square-github"></i></a></span>
+                            </div>
+                        </div>
+                                        <nav class="section-nav sidebar-nav">
+                    <button class="nav-button active" onclick="showSidebarSection('about')"><i class="fas fa-user"></i> About</button>
+                    <button class="nav-button" onclick="showSidebarSection('summary')"><i class="fas fa-star"></i> Professional Summary</button>
+                </nav>
                     </div>
                     <div class="picture-section">
                         <div class="resume-picture-placeholder">
-                            <span>📷</span>
+                            <i class="fas fa-camera fa-2x"></i>
                             <p>Resume Photo</p>
                         </div>
                     </div>
                 </div>
                 
-                <!-- Professional Summary -->
-                <section class="resume-section">
-                    <h2 class="section-title">Professional Summary</h2>
-                    <div class="section-content">
-                        <p>Full-stack developer and educator with expertise in .NET ecosystem and modern web technologies. Recently graduated from System Development .NET program at Campus Varberg (June 2025) and gained hands-on experience through internship at Aire ENERGY. Combines technical proficiency in C#, ASP.NET Core, Angular, and Entity Framework with pedagogical background from Uppsala University. Proven ability to build comprehensive applications including library management systems with JWT authentication, database migrations, and API development. Passionate about clean code architecture, design patterns, and creating user-centered solutions. Currently seeking opportunities to apply technical skills and educational background in a dynamic development role.</p>
+                <!-- Sidebar Content Area -->
+                <div class="sidebar-content-area">
+                    <!-- About Content -->
+                    <div id="about-content" class="sidebar-section-content active">
+                        <section class="resume-section">
+                            <div class="section-content">
+                                <p>I'm a recent graduate eager to dive into the world of programming with the knowledge and passion I've built over the past two years of study.</p>
+                                <p>What excites me most about programming is the endless opportunity to learn. There’s always something new to explore, and I thrive on finding solutions and growing my skills.</p>
+
+                                <p>With a background as an educator and a creative mindset, I approach programming as both a puzzle and an art form. My goal is to design functional, user-centered solutions that balance technical precision with thoughtful design.</p>      
+                                <p>I enjoy both backend and frontend development, as reflected in projects like NyriaNest—a thesis project that I continue to develop and expand in my free time.</p>
+                                <p>I may be new to the industry, but I bring proactivity, resourcefulness, and a love of learning. I adapt quickly, stay up to date with new technologies, and am always ready to pick up a new programming language or tool when needed.</p>
+                                <p>For me, programming isn't just a career, it's a hobby.</p>
+                            </div>
+                        </section>
                     </div>
-                </section>
+                    
+                    <!-- Professional Summary Content -->
+                    <div id="summary-content" class="sidebar-section-content">
+                        <section class="resume-section">
+                            <div class="section-content">
+                                <ul class="summary-list">
+                                    <li><strong>Full-stack developer and educator</strong> with expertise in .NET ecosystem and modern web technologies</li>
+                                    <li><strong>Recent graduate</strong> from System Development .NET program at Campus Varberg (June 2025), complemented by hands-on experience during internship at Aire ENERGY</li>
+                                    <li><strong>Technical expertise</strong> in C#, ASP.NET Core, Angular, and Entity Framework, with strong pedagogical foundation from Uppsala University</li>
+                                    <li><strong>Proven development skills</strong> including library management systems with JWT authentication, database migrations, and API development</li>
+                                    <li><strong>Passionate about</strong> clean code architecture, design patterns, and creating user-centered solutions</li>
+                                    <li><strong>Actively seeking opportunities</strong> to apply both technical expertise and educational experience in a dynamic development role</li>
+                                </ul>
+                            </div>
+                        </section>
+                    </div>
+                </div>
             </aside>
 
             <!-- Right Content Area -->
             <main class="resume-main">
                 <!-- Section Navigation Buttons -->
                 <nav class="section-nav">
-                    <button class="nav-button active" onclick="showSection('experience')">Work Experience</button>
-                    <button class="nav-button" onclick="showSection('education')">Education</button>
-                    <button class="nav-button" onclick="showSection('skills')">Technical Skills</button>
-                    <button class="nav-button" onclick="showSection('projects')">Projects</button>
+                    <button class="nav-button active" onclick="showSection('experience')"><i class="fas fa-briefcase"></i> Work Experience</button>
+                    <button class="nav-button" onclick="showSection('education')"><i class="fas fa-graduation-cap"></i> Education</button>
+                    <button class="nav-button" onclick="showSection('skills')"><i class="fas fa-code"></i> Technical Skills</button>
+                    <button class="nav-button" onclick="showSection('projects')"><i class="fas fa-project-diagram"></i> Projects</button>
+                    <button class="nav-button print-button" onclick="printResume()"><i class="fas fa-print"></i> Print Resume</button>
                 </nav>
 
                 <!-- Dynamic Content Area -->
@@ -57,69 +98,72 @@
                     <!-- Experience Content -->
                     <div id="experience-content" class="section-content active">
                         <div class="experience-item">
-                            <div class="job-header">
-                                <h3 class="job-title">Internship</h3>
-                                <span class="job-company">Aire ENERGY</span>
-                                <span class="job-date">2024/11/05 - 2025/05/01</span>
+                            <div class="job-layout">
+                                <div class="left-sidebar">
+                                    <span class="job-company">Aire ENERGY</span>
+                                    <span class="job-date">2024/11/05 - 2025/05/01</span>
+                                </div>
+                                <div class="job-content">
+                                    <h3 class="job-title">Internship</h3>
+                                    <ul class="job-responsibilities">
+                                        <li>Programming backend development using C#</li>
+                                        <li>Frontend development with Angular framework</li>
+                                        <li>Gained hands-on experience in full-stack development</li>
+                                    </ul>
+                                </div>
                             </div>
-                            <ul class="job-responsibilities">
-                                <li>Programming backend development using C#</li>
-                                <li>Frontend development with Angular framework</li>
-                                <li>Gained hands-on experience in full-stack development</li>
-                            </ul>
                         </div>
 
                         <div class="experience-item">
-                            <div class="job-header">
-                                <h3 class="job-title">Sales Person</h3>
-                                <span class="job-company">Forex</span>
-                                <span class="job-date">2023 - 2024</span>
+                            <div class="job-layout">
+                                <div class="left-sidebar">
+                                    <span class="job-company">Forex</span>
+                                    <span class="job-date">2023 - 2024</span>
+                                </div>
+                                <div class="job-content">
+                                    <h3 class="job-title">Sales Person</h3>
+                                    <ul class="job-responsibilities">
+                                        <li>Provided in-store currency exchange services</li>
+                                        <li>Handled customer transactions and inquiries</li>
+                                        <li>Maintained accurate financial records and compliance</li>
+                                    </ul>
+                                </div>
                             </div>
-                            <ul class="job-responsibilities">
-                                <li>Provided in-store currency exchange services</li>
-                                <li>Handled customer transactions and inquiries</li>
-                                <li>Maintained accurate financial records and compliance</li>
-                            </ul>
                         </div>
 
                         <div class="experience-item">
-                            <div class="job-header">
-                                <h3 class="job-title">Teacher</h3>
-                                <span class="job-company">Multiple Schools</span>
-                                <span class="job-date">2020 - 2023</span>
+                            <div class="job-layout">
+                                <div class="left-sidebar">
+                                    <span class="job-company">Multiple Schools</span>
+                                    <span class="job-date">2020 - 2023</span>
+                                </div>
+                                <div class="job-content">
+                                    <h3 class="job-title">Teacher</h3>
+                                    <ul class="job-responsibilities">
+                                        <li><strong>Year 7-9:</strong> Kunskapsskolan Varberg</li>
+                                        <li><strong>Year 4-6:</strong> Frillessås Elementary, Almers Elementary, Nyhemsskolan Elementary</li>
+                                        <li>Developed lesson plans and educational materials for different age groups</li>
+                                        <li>Managed classroom environments and student progress assessment</li>
+                                    </ul>
+                                </div>
                             </div>
-                            <ul class="job-responsibilities">
-                                <li><strong>Year 7-9:</strong> Kunskapsskolan Varberg</li>
-                                <li><strong>Year 4-6:</strong> Frillessås Elementary, Almers Elementary, Nyhemsskolan Elementary</li>
-                                <li>Developed lesson plans and educational materials for different age groups</li>
-                                <li>Managed classroom environments and student progress assessment</li>
-                            </ul>
                         </div>
 
                         <div class="experience-item">
-                            <div class="job-header">
-                                <h3 class="job-title">Case Manager</h3>
-                                <span class="job-company">Swedish Social Insurance Agency</span>
-                                <span class="job-date">2014 - 2020</span>
+                            <div class="job-layout">
+                                <div class="left-sidebar">
+                                    <span class="job-company">Swedish Social Insurance Agency</span>
+                                    <span class="job-date">2014 - 2020</span>
+                                </div>
+                                <div class="job-content">
+                                    <h3 class="job-title">Case Manager</h3>
+                                    <ul class="job-responsibilities">
+                                        <li>Managed sickness benefit cases and assessments</li>
+                                        <li>Provided guidance and support to clients</li>
+                                        <li>Maintained detailed case documentation and compliance with regulations</li>
+                                    </ul>
+                                </div>
                             </div>
-                            <ul class="job-responsibilities">
-                                <li>Managed sickness benefit cases and assessments</li>
-                                <li>Provided guidance and support to clients</li>
-                                <li>Maintained detailed case documentation and compliance with regulations</li>
-                            </ul>
-                        </div>
-
-                        <div class="experience-item">
-                            <div class="job-header">
-                                <h3 class="job-title">Receptionist</h3>
-                                <span class="job-company">Capio CFTK</span>
-                                <span class="job-date">2014 - 2020</span>
-                            </div>
-                            <ul class="job-responsibilities">
-                                <li>Managed front desk operations and patient reception</li>
-                                <li>Handled appointment scheduling and patient inquiries</li>
-                                <li>Coordinated with medical staff and administrative teams</li>
-                            </ul>
                         </div>
                     </div>
 
@@ -129,13 +173,26 @@
                             <h3 class="degree">System Development .NET</h3>
                             <span class="school">Campus Varberg</span>
                             <span class="graduation-date">2023 - 2025</span>
-                            <p class="education-details">Additional courses taken in IT: Introduction to Python, Cyber Security</p>
                         </div>
+
                         <div class="education-item">
                             <h3 class="degree">Pedagogical Degree, Year 4-6</h3>
                             <span class="school">Uppsala University</span>
                             <span class="graduation-date">2016 - 2020</span>
                         </div>
+                    </br>
+                             <div class="education-item">
+                            <h3 class="degree">Additional courses taken in IT</h3>
+                             <h4>Introduction to Python</h4>
+                            <span class="school">Högskolan i Gävle</span>
+                            <span class="graduation-date">2024</span>
+                        </div>
+
+                            <div class="education-item">
+                             <h4>Cyber Security</h4>
+                            <span class="school">Linköpings Universitet</span>
+                            <span class="graduation-date">2024</span>
+                       </div>
                     </div>
 
                     <!-- Skills Content -->
@@ -194,26 +251,38 @@
                     <!-- Projects Content -->
                     <div id="projects-content" class="section-content">
                         <div class="project-item">
-                            <h3 class="project-title">NanyriaNest - Library Management System</h3>
-                            <span class="project-tech">C#, ASP.NET Core, Entity Framework, Angular, SQL Server, JWT Authentication</span>
-                            <p class="project-description">Comprehensive library management system built with .NET 8.0 backend and Angular CLI v17.3.9 frontend. Features include user authentication with JWT, Entity Framework Core with migrations, repository pattern implementation, AutoMapper for object mapping, and Swagger/OpenAPI documentation.</p>
+                            <div class="job-layout">
+                                <div class="job-content">
+                                    <h3 class="project-title">NanyriaNest - Library Management System</h3>
+                                    <span class="project-tech">C#, ASP.NET Core, Entity Framework, Angular, SQL Server, JWT Authentication</span>
+                                    <p class="project-description">Comprehensive library management system built with .NET 8.0 backend and Angular CLI v17.3.9 frontend. Features include user authentication with JWT, Entity Framework Core with migrations, repository pattern implementation, AutoMapper for object mapping, and Swagger/OpenAPI documentation.</p>
+                                </div>
+                                <div class="right-sidebar">
+                                    <a href="https://github.com/Nanyria/NyriaNest" target="_blank" class="github-link">
+                                        <i class="fab fa-github"></i> View on GitHub
+                                    </a>
+                                </div>
+                            </div>
                         </div>
                         <div class="project-item">
-                            <h3 class="project-title">Personal Dashboard</h3>
-                            <span class="project-tech">HTML, CSS, JavaScript</span>
-                            <p class="project-description">Built a responsive personal dashboard with weather integration, quotes, notes, and link management. Features custom scroll arrows and localStorage persistence.</p>
+                            <div class="job-layout">
+                                <div class="job-content">
+                                    <h3 class="project-title">Personal Dashboard</h3>
+                                    <span class="project-tech">HTML, CSS, JavaScript</span>
+                                    <p class="project-description">Built a responsive personal dashboard with weather integration, quotes, notes, and link management. Features custom scroll arrows and localStorage persistence.</p>
+                                </div>
+                                <div class="right-sidebar">
+                                    <a href="https://github.com/Nanyria/Nanyria.github.io" target="_blank" class="github-link">
+                                        <i class="fab fa-github"></i> View on GitHub
+                                    </a>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
             </main>
         
         </div> <!-- Close resume-layout -->
-
-        <!-- Footer -->
-        <footer class="resume-footer">
-            <a href="index.html" class="back-to-dashboard">← Back to Dashboard</a>
-            <button onclick="printResume()" class="print-button">🖨️ Print Resume</button>
-        </footer>
     </div>
 </body>
 </html>

@@ -147,41 +147,79 @@ p {
 .resume-contact {
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
-    gap: 20px;
+    gap: 25px;
     font-size: 0.9em;
     color: #6d493b;
-    padding: 0 15px;
+    padding: 20px;
+    background: rgba(252, 249, 242, 0.4);
+    border-radius: 12px;
+    border: 1px solid rgba(193, 155, 135, 0.2);
+    margin: 15px;
+    backdrop-filter: blur(10px);
+    box-shadow: 0 4px 15px rgba(109, 73, 59, 0.1);
+}
+
+.contact-section-header {
+    text-align: center;
+    margin-bottom: 10px;
+    padding-bottom: 15px;
+    border-bottom: 2px solid rgba(193, 155, 135, 0.3);
+}
+
+.contact-title {
+    font-family: "Aboreto", system-ui;
+    font-size: 1.1em;
+    font-weight: 600;
+    color: #6d493b;
+    margin: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.contact-title i {
+    color: #c19b87;
+    font-size: 1.2em;
 }
 
 .contact-info {
     display: flex;
     flex-direction: column;
-    gap: 12px;
+    gap: 15px;
     flex: 1;
     z-index: 11;
 }
 
 .contact-header {
     width: 100%;
-    padding: 15px 20px;
-    margin-bottom: 15px;
+    padding: 0;
+    margin-bottom: 0;
     z-index: 11;
     text-align: center;
 }
 
 .social-links {
     display: flex;
-    gap: 20px;
+    gap: 15px;
     align-items: center;
-    justify-content: space-evenly;
+    justify-content: center;
     z-index: 11;
+    padding: 15px 0;
+    margin-top: 10px;
 }
 
 .contact-info span {
-    padding: 10px;
-    border-radius: 20px;
-    align-items: flex-start;
+    padding: 12px 15px;
+    border-radius: 8px;
+    align-items: center;
+    display: flex;
+    gap: 10px;
+    background: rgba(255, 255, 255, 0.3);
+    border: 1px solid rgba(193, 155, 135, 0.15);
+    font-weight: 500;
 }
 
 .contact-info span,
@@ -248,6 +286,44 @@ p {
     flex-shrink: 0;
 }
 
+/* Mobile Menu Container */
+.mobile-menu-container {
+    position: relative;
+    width: 100%;
+}
+
+/* Mobile Menu Button */
+.mobile-menu-button {
+    display: none;
+    background: #f9f5f2;
+    border: 2px solid #e4b696;
+    padding: 12px 15px;
+    border-radius: 25px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-weight: 600;
+    color: #6d493b;
+    font-family: "Aboreto", system-ui;
+    margin-bottom: 10px;
+    position: sticky;
+    top: 0;
+    background: #fcf9f2;
+    z-index: 11;
+    width: fit-content;
+}
+
+.mobile-menu-button:hover {
+    background: rgba(193, 155, 135, 0.1);
+    border-color: #c19b87;
+    color: #c19b87;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(193, 155, 135, 0.2);
+}
+
+.mobile-menu-button i {
+    font-size: 1.2em;
+}
+
 .nav-button {
     background: #f9f5f2;
     border: 2px solid #e4b696;
@@ -283,6 +359,54 @@ p {
     flex: 1;
     overflow-y: auto;
     padding-bottom: 20px;
+}
+
+/* Content Section Header for Mobile */
+.content-section-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 15px 20px;
+    margin-bottom: 20px;
+    background: linear-gradient(135deg, #c19b87, #e4b696);
+    color: white;
+    border-radius: 12px;
+    font-family: "Aboreto", system-ui;
+    font-weight: 600;
+    font-size: 1.2em;
+    box-shadow: 0 3px 10px rgba(193, 155, 135, 0.3);
+    position: sticky;
+    top: -20px;
+    z-index: 5;
+}
+
+.header-menu-button {
+    background: rgba(255, 255, 255, 0.2);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    border-radius: 8px;
+    color: white;
+    padding: 8px 12px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-size: 1.1em;
+}
+
+.header-menu-button:hover {
+    background: rgba(255, 255, 255, 0.3);
+    border-color: rgba(255, 255, 255, 0.5);
+}
+
+.section-info {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    flex: 1;
+    justify-content: center;
+}
+
+.content-section-header i {
+    font-size: 1.3em;
+    margin-right: 0;
 }
 
 .content-area .section-content {
@@ -689,11 +813,54 @@ p {
     }
 }
 
+/* Mobile Menu Styles - Applied at any screen size when needed */
+.section-nav.mobile-hidden {
+    display: none;
+}
+
+.section-nav.mobile-open {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: calc(100% + 5px);
+    left: 0;
+    right: 0;
+    background: #fcf9f2;
+    border: 2px solid #e4b696;
+    border-radius: 12px;
+    padding: 15px;
+    box-shadow: 0 4px 12px rgba(109, 73, 59, 0.2);
+    z-index: 20;
+    animation: slideDown 0.3s ease;
+}
+
+.section-nav.mobile-open .nav-button {
+    margin-bottom: 10px;
+    width: 100%;
+    justify-content: flex-start;
+}
+
+.section-nav.mobile-open .nav-button:last-child {
+    margin-bottom: 0;
+}
+
+@keyframes slideDown {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
 /* ===========================
    RESPONSIVE DESIGN
    =========================== */
 
-@media (max-width: 768px) {
+/* Common mobile/tablet styles for screens 1024px and below */
+@media (max-width: 1024px) {
     .resume-container {
         margin: 10px;
         padding: 15px;
@@ -714,20 +881,110 @@ p {
         position: static;
         margin-bottom: 20px;
         padding: 20px;
+        overflow-y: visible;
+        max-height: none;
+        height: auto;
     }
     
+    .sidebar-top {
+        flex-direction: column;
+        gap: 20px;
+        align-items: center;
+        text-align: center;
+    }
+    
+    .contact-section {
+        width: 100%;
+        order: 1;
+        margin-right: 0;
+    }
+    
+    .picture-section {
+        flex: 0 0 auto;
+        order: 2;
+        justify-content: center;
+    }
+    
+    .sidebar-context-area {
+        margin-top: 25px;
+        height: auto;
+        overflow: visible;
+    }
+    
+    .sidebar-content-area {
+        padding: 15px 0;
+        height: auto;
+        overflow: visible;
+    }
+}
+
+/* Tablet screens (768px and below) - Additional mobile-specific styles */
+@media (max-width: 768px) {
     .resume-name {
         font-size: 1.8em;
     }
     
-    .section-nav {
-        flex-direction: column;
-        gap: 8px;
+    /* Content Section Header Mobile Styles */
+    .content-section-header {
+        display: flex;
+        padding: 12px 15px;
+        font-size: 1.1em;
+        margin-bottom: 15px;
+        top: -15px;
     }
     
-    .nav-button {
-        text-align: center;
-        padding: 10px 15px;
+    /* Mobile Navigation */
+    .mobile-menu-button {
+        display: block;
+        position: relative;
+    }
+    
+    /* Mobile Section Headers */
+    .mobile-section-header {
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 8px;
+        width: 100%;
+    }
+    
+    .mobile-section-title {
+        font-size: 1.1em;
+        font-weight: bold;
+        color: #6d493b;
+        margin-bottom: 4px;
+        font-family: "Aboreto", system-ui;
+    }
+    
+    .mobile-section-desc {
+        font-size: 0.85em;
+        color: #8a6b5d;
+        font-weight: normal;
+        font-style: italic;
+        line-height: 1.3;
+        font-family: "Poppins", sans-serif;
+    }
+    
+    /* Adjust icon positioning in mobile menu */
+    .section-nav.mobile-open .nav-button i {
+        position: absolute;
+        right: 20px;
+        top: 50%;
+        transform: translateY(-50%);
+        font-size: 1.2em;
+        color: #c19b87;
+    }
+    
+    /* Active state adjustments for mobile */
+    .section-nav.mobile-open .nav-button.active .mobile-section-title {
+        color: white;
+    }
+    
+    .section-nav.mobile-open .nav-button.active .mobile-section-desc {
+        color: rgba(255, 255, 255, 0.9);
+    }
+    
+    .section-nav.mobile-open .nav-button.active i {
+        color: white;
     }
     
     .job-layout {
@@ -751,10 +1008,36 @@ p {
     }
 }
 
+/* Medium tablet screens (481px-768px) - Additional styles */
+@media (max-width: 768px) and (min-width: 481px) {
+    .resume-sidebar {
+        padding: 25px;
+    }
+    
+    .sidebar-nav .nav-button {
+        padding: 12px 16px;
+        font-size: 0.95em;
+    }
+}
+
+/* Phone screens (480px and below) - Additional styles */
 @media (max-width: 480px) {
+    body, html {
+        overflow: auto;
+    }
+    
     .resume-container {
+        position: relative;
         margin: 5px;
         padding: 10px;
+        inset: auto;
+        height: auto;
+        min-height: 100vh;
+    }
+    
+    .resume-layout {
+        overflow: visible;
+        height: auto;
     }
     
     .resume-name {
@@ -765,22 +1048,81 @@ p {
         font-size: 1.2em;
     }
     
+    /* Enhanced Mobile Menu for smaller screens */
+    .mobile-menu-button {
+        padding: 10px 12px;
+        font-size: 0.9em;
+    }
+    
+    /* Content Section Header for Phone */
+    .content-section-header {
+        padding: 10px 12px;
+        font-size: 1em;
+        margin-bottom: 12px;
+        gap: 10px;
+        top: -10px;
+    }
+    
+    .content-section-header i {
+        font-size: 1.2em;
+    }
+    
+    .section-nav.mobile-open {
+        padding: 12px;
+    }
+    
+    .section-nav.mobile-open .nav-button {
+        padding: 12px 15px;
+        font-size: 0.9em;
+        margin-bottom: 6px;
+    }
+    
     .resume-sidebar {
         padding: 15px;
+    }
+    
+    .resume-picture {
+        width: 120px;
+        height: 160px;
+        max-width: 120px;
+        max-height: 160px;
+    }
+    
+    .contact-header {
+        text-align: center;
+        padding: 10px 0;
+        margin-bottom: 10px;
     }
     
     .resume-contact {
         font-size: 0.8em;
         flex-direction: column;
-        gap: 15px;
+        gap: 5px;
     }
     
-    .contact-info {
-        gap: 8px;
-    }
+
     
     .social-links {
         justify-content: center;
         gap: 15px;
+    }
+    
+    .sidebar-content-area {
+        padding: 10px 0;
+        margin-top: 20px;
+    }
+    
+    .sidebar-section-content {
+        display: block !important;
+    }
+    
+    .resume-section {
+        margin-bottom: 20px;
+        padding: 15px;
+    }
+    
+    .resume-main {
+        overflow: visible;
+        height: auto;
     }
 }

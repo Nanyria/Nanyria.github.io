@@ -884,6 +884,8 @@ p {
         overflow-y: visible;
         max-height: none;
         height: auto;
+        border-radius: 12px;
+        border-left: 3px solid #c19b87;
     }
     
     .sidebar-top {

@@ -3,8 +3,7 @@
 document.addEventListener('DOMContentLoaded', function() {
     // Initialize with Experience section active by default for main content
     showSection('experience');
-    // Initialize with About section active by default for sidebar
-    showSidebarSection('about');
+
 });
 
 // Tab-based section navigation for main content area

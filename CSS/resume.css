@@ -2,20 +2,20 @@
    RESUME STYLES
    =========================== */
 
-/* Google Fonts */
+/* Base Styles */
 .aboreto-regular {
   font-family: "Aboreto", system-ui;
   font-weight: 400;
   font-style: normal;
 }
 
-body, html{
+body, html {
     height: 100%;
     font-family: "Poppins", sans-serif;
     background: #fcf9f2;
-    /* Hide scrollbars globally for all elements */
+    /* Hide scrollbars globally */
     scrollbar-width: none; /* Firefox */
-    -ms-overflow-style: none; /* Internet Explorer 10+ */
+    -ms-overflow-style: none; /* IE 10+ */
     overflow: hidden;
 }
 
@@ -27,6 +27,20 @@ body::-webkit-scrollbar,
 p {
     font-size: 14px;
 }
+/* Common transition effects */
+.transition-base {
+    transition: all 0.3s ease;
+}
+
+/* Common gradient backgrounds */
+.gradient-primary {
+    background: linear-gradient(135deg, #c19b87, #e4b696);
+}
+
+.gradient-secondary {
+    background: linear-gradient(135deg, #6d493b, #c19b87);
+}
+
 /* Main Container */
 .resume-container {
     position: fixed;
@@ -67,7 +81,10 @@ p {
     flex-direction: column;
     height: 100%;
     overflow: hidden;
+    position: relative;
 }
+
+
 
 /* ===========================
    SIDEBAR CONTENT
@@ -83,22 +100,38 @@ p {
     flex: 3;
     display: flex;
     flex-direction: column;
+    margin-right: auto;
+
 }
 
 .picture-section {
-    flex: 2;
+    flex: 3;
     display: flex;
     justify-content: center;
     align-items: flex-start;
+    overflow: hidden;
+}
 
-    padding:  0 0 20px 0;
+.resume-picture {
+    width: 90%;
+    aspect-ratio: 3/4;
+    max-width: 90%;
+    max-height: 90%;
+    border: 2px solid #c19b87;
+    border-radius: 8px;
+    object-fit: cover;
+}
+
+.resume-picture p {
+    margin: 0;
+    font-size: 0.8em;
 }
 
 .resume-name {
     font-size: 2.2em;
     font-weight: bold;
     color: #6d493b;
-    margin: 0 0 20px 0;
+    margin: 0;
     text-shadow: 0 2px 4px rgba(109, 73, 59, 0.1);
 }
 
@@ -106,17 +139,19 @@ p {
     font-size: 1em;
     font-weight: 500;
     font-style: italic;
-    color:#6d493b;
+    color: #6d493b;
+    margin: 0 15px;
 }
 
 /* Contact Information */
 .resume-contact {
     display: flex;
+    flex-direction: column;
     justify-content: space-between;
-    align-items: flex-start;
     gap: 20px;
     font-size: 0.9em;
     color: #6d493b;
+    padding: 0 15px;
 }
 
 .contact-info {
@@ -124,36 +159,58 @@ p {
     flex-direction: column;
     gap: 12px;
     flex: 1;
+    z-index: 11;
 }
 
 .contact-header {
-    padding: 15px;
-
+    width: 100%;
+    padding: 15px 20px;
+    margin-bottom: 15px;
+    z-index: 11;
+    text-align: center;
 }
 
 .social-links {
     display: flex;
-    gap: 10px;
+    gap: 20px;
     align-items: center;
+    justify-content: space-evenly;
+    z-index: 11;
+}
+
+.contact-info span {
+    padding: 10px;
+    border-radius: 20px;
+    align-items: flex-start;
 }
 
 .contact-info span,
 .social-links span {
-    padding: 10px 15px;
-    border-radius: 20px;
     transition: all 0.3s ease;
-    text-align: left;
 }
 
 .social-links span {
-    padding: 10px 12px;
-    width: 45px;
-    height: 45px;
+    padding: 0;
+    border-radius: 10px;
+    width: 40px;
+    height: 40px;
     display: flex;
     align-items: center;
     justify-content: center;
     font-size: 30px;
+}
+
+.social-links span a {
+    color: inherit;
+    text-decoration: none;
+}
+
+.social-links span a i {
+    display: block;
     text-align: center;
+    line-height: 1;
+    margin: 0;
+    padding: 0;
 }
 
 .contact-info span:hover,
@@ -172,39 +229,6 @@ p {
     color: #c19b87;
 }
 
-/* Picture Placeholder */
-.resume-picture-placeholder {
-    width: 240px;
-    height: 300px;
-    background: #fcf9f2;
-    border: 2px dashed #c19b87;
-    border-radius: 8px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    color: #6d493b;
-    font-size: 0.9em;
-    text-align: center;
-    transition: all 0.3s ease;
-}
-
-.resume-picture-placeholder:hover {
-    background: #f9f5f2;
-    border-color: #e4b696;
-    transform: translateY(-2px);
-    box-shadow: 0 4px 8px rgba(109, 73, 59, 0.1);
-}
-
-.resume-picture-placeholder i {
-    color: #c19b87;
-    margin-bottom: 10px;
-}
-
-.resume-picture-placeholder p {
-    margin: 0;
-    font-size: 0.8em;
-}
 
 /* ===========================
    MAIN CONTENT AREA
@@ -234,8 +258,7 @@ p {
     font-weight: 600;
     color: #6d493b;
     white-space: nowrap;
-
-      font-family: "Aboreto", system-ui;
+    font-family: "Aboreto", system-ui;
 }
 
 .nav-button:hover {
@@ -254,51 +277,6 @@ p {
     box-shadow: 0 4px 8px rgba(193, 155, 135, 0.3);
 }
 
-/* Sidebar Navigation */
-.sidebar-nav {
-    margin-top: auto;
-    background-color: #6d493b;
-    border-radius: 8px 8px 0 0;
-    margin-bottom: 0px;
-    align-content: space-between;
-    display: flex;
-    flex-direction: row;
-    padding: 0px;
-
-}
-
-.sidebar-nav .nav-button {
-    font-size: 14px;
-    padding: 10px 15px;
-    flex: 1;
-    box-sizing: border-box;
-    border-radius: 0;
-}
-
-.sidebar-nav .nav-button:first-child {
-    border-radius: 8px 0 0 0;
-}
-
-.sidebar-nav .nav-button:last-child {
-    border-radius: 0 8px 0 0;
-}
-
-.sidebar-nav .nav-button.active {
-    color: #c19b87;
-    background: transparent;
-    border: none;
-    box-shadow: none;
-    transform: translateY(2px);
-}
-
-
-.sidebar-nav .nav-button:hover {
-    background: rgba(193, 155, 135, 0.1);
-    border-color: white;
-    color: #c19b87;
-    box-shadow: 0 4px 8px rgba(193, 155, 135, 0.2);
-    transform: translateY(2px);
-}
 /* Content Area */
 .content-area {
     position: relative;
@@ -319,9 +297,12 @@ p {
 /* Sidebar Content Area */
 .sidebar-content-area {
     position: relative;
-    flex: 1;
+    width: 100%;
     overflow-y: auto;
     overflow-x: hidden;
+    padding: 0 20px 0 0;
+    margin-top: auto;
+    z-index: 11;
 }
 
 .sidebar-content-area .sidebar-section-content {
@@ -349,9 +330,10 @@ p {
     margin-bottom: 35px;
     padding: 20px;
     background: #f9f5f2;
-    border-radius: 0 8px 8px 8px;
+    border-radius: 8px;
     border-left: 4px solid #c19b87;
     box-shadow: 0 2px 8px rgba(109, 73, 59, 0.05);
+    overflow: hidden;
 }
 
 
@@ -405,6 +387,59 @@ p {
     display: flex;
     gap: 30px;
     align-items: stretch;
+}
+.about-layout {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+    padding: 30px;
+    position: relative;
+    overflow: hidden;
+}
+
+.about-layout::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 100px;
+    height: 100px;
+    background: linear-gradient(45deg, rgba(193, 155, 135, 0.1), rgba(228, 182, 150, 0.05));
+    border-radius: 50%;
+    transform: translate(50%, -50%);
+}
+
+.about-layout p {
+    font-size: 16px;
+    line-height: 1.7;
+    color: #6d493b;
+    margin: 0;
+    text-align: justify;
+    position: relative;
+    z-index: 1;
+    transition: transform 0.2s ease;
+}
+
+.about-layout p:hover {
+    transform: translateX(5px);
+}
+
+.about-layout p:first-child {
+    font-size: 18px;
+    font-weight: 500;
+    color: #5a3d2f;
+}
+
+.about-layout p:last-child {
+    font-style: italic;
+    text-align: center;
+    font-weight: 600;
+    color: #c19b87;
+    margin-top: 10px;
+    padding: 15px;
+    background: rgba(193, 155, 135, 0.1);
+    border-radius: 8px;
+    border: 1px solid rgba(193, 155, 135, 0.2);
 }
 
 .left-sidebar {
@@ -606,29 +641,12 @@ p {
     font-size: 1.2em;
 }
 
-/* Print Button in Navigation */
-.nav-button.print-button {
-    background: linear-gradient(135deg, #c19b87, #e4b696);
-    border-color: #c19b87;
-    color: white;
-}
-
-.nav-button.print-button:hover {
-    background: linear-gradient(135deg, #e4b696, #c19b87);
-    border-color: #c19b87;
-    color: white;
-    transform: translateY(-2px);
-    box-shadow: 0 4px 8px rgba(193, 155, 135, 0.3);
-}
-
 /* ===========================
    FONT AWESOME ICONS
    =========================== */
 
 .resume-contact i,
-.nav-button i,
-.back-to-dashboard i,
-.print-button i {
+.nav-button i {
     margin-right: 8px;
 }
 
@@ -717,17 +735,13 @@ p {
         gap: 15px;
     }
     
-    .left-sidebar {
-        flex: none;
-        border-right: none;
-        border-bottom: 2px solid rgba(193, 155, 135, 0.3);
-        padding-right: 0;
-        padding-bottom: 15px;
-    }
+    .left-sidebar,
     .right-sidebar {
         flex: none;
+        border-right: none;
         border-left: none;
         border-bottom: 2px solid rgba(193, 155, 135, 0.3);
+        padding-right: 0;
         padding-left: 0;
         padding-bottom: 15px;
     }

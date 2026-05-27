@@ -3,16 +3,28 @@
    =========================== */
 
 /* Base Styles */
-.aboreto-regular {
-  font-family: "Aboreto", system-ui;
-  font-weight: 400;
-  font-style: normal;
+:root {
+    --bg-primary: #0F172A;
+    --bg-secondary: #111827;
+    --surface: #1E293B;
+
+    --text-primary: #F8FAFC;
+    --text-secondary: #94A3B8;
+
+    --accent: #64748B;
+    --border: #334155;
+}
+
+.inter-regular {
+    font-family: "Inter", sans-serif;
+    font-weight: 400;
+    font-style: normal;
 }
 
 body, html {
     height: 100%;
     font-family: "Poppins", sans-serif;
-    background: #fcf9f2;
+    background: var(--bg-primary);
     /* Hide scrollbars globally */
     scrollbar-width: none; /* Firefox */
     -ms-overflow-style: none; /* IE 10+ */
@@ -32,20 +44,11 @@ p {
     transition: all 0.3s ease;
 }
 
-/* Common gradient backgrounds */
-.gradient-primary {
-    background: linear-gradient(135deg, #c19b87, #e4b696);
-}
-
-.gradient-secondary {
-    background: linear-gradient(135deg, #6d493b, #c19b87);
-}
-
 /* Main Container */
 .resume-container {
     position: fixed;
     inset: 20px;
-    background: #fcf9f2;
+    background: var(--bg-primary);
     border-radius: 12px;
     box-shadow: 0 0 20px rgba(109, 73, 59, 0.1);
     box-sizing: border-box;
@@ -73,10 +76,10 @@ p {
 
 .resume-sidebar {
     flex: 1;
-    background: #e4b696;
+    background: var(--bg-secondary);
     border-radius: 0 0 0 12px;
     padding: 20px;
-    border-left: 3px solid #c19b87;
+    border-left: 3px solid var(--text-secondary);
     display: flex;
     flex-direction: column;
     height: 100%;
@@ -114,10 +117,10 @@ p {
 
 .resume-picture {
     width: 90%;
-    aspect-ratio: 3/4;
+    aspect-ratio: 4/4;
     max-width: 90%;
     max-height: 90%;
-    border: 2px solid #c19b87;
+    border: 2px solid var(--text-secondary);
     border-radius: 8px;
     object-fit: cover;
 }
@@ -130,7 +133,7 @@ p {
 .resume-name {
     font-size: 2.2em;
     font-weight: bold;
-    color: #6d493b;
+    color: var(--text-primary);
     margin: 0;
     text-shadow: 0 2px 4px rgba(109, 73, 59, 0.1);
 }
@@ -139,7 +142,7 @@ p {
     font-size: 1em;
     font-weight: 500;
     font-style: italic;
-    color: #6d493b;
+    color: var(--text-primary);
     margin: 0 15px;
 }
 
@@ -147,30 +150,30 @@ p {
 .resume-contact {
     display: flex;
     flex-direction: column;
-    gap: 25px;
+    gap: 0px;
     font-size: 0.9em;
-    color: #6d493b;
+    color: var(--text-primary);
     padding: 20px;
     background: rgba(252, 249, 242, 0.4);
     border-radius: 12px;
-    border: 1px solid rgba(193, 155, 135, 0.2);
+    border: 1px solid rgba(51, 65, 85, 0.2);
     margin: 15px;
     backdrop-filter: blur(10px);
-    box-shadow: 0 4px 15px rgba(109, 73, 59, 0.1);
+    box-shadow: 0 1px 3px rgba(0,0,0,0.2);
 }
 
 .contact-section-header {
     text-align: center;
     margin-bottom: 10px;
     padding-bottom: 15px;
-    border-bottom: 2px solid rgba(193, 155, 135, 0.3);
+    border-bottom: 2px solid rgba(51, 65, 85, 0.3);
 }
 
 .contact-title {
-    font-family: "Aboreto", system-ui;
+    font-family: "Inter", sans-serif;
     font-size: 1.1em;
     font-weight: 600;
-    color: #6d493b;
+    color: var(--text-primary);
     margin: 0;
     display: flex;
     align-items: center;
@@ -181,14 +184,14 @@ p {
 }
 
 .contact-title i {
-    color: #c19b87;
+    color: var(--text-secondary);
     font-size: 1.2em;
 }
 
 .contact-info {
     display: flex;
     flex-direction: column;
-    gap: 15px;
+    gap: 5px;
     flex: 1;
     z-index: 11;
 }
@@ -203,12 +206,12 @@ p {
 
 .social-links {
     display: flex;
-    gap: 15px;
+    gap: 5px;
     align-items: center;
-    justify-content: center;
+    justify-content: left;
     z-index: 11;
-    padding: 15px 0;
-    margin-top: 10px;
+    padding: 0;
+    margin-top: 0px;
 }
 
 .contact-info span {
@@ -218,7 +221,7 @@ p {
     display: flex;
     gap: 10px;
     background: rgba(255, 255, 255, 0.3);
-    border: 1px solid rgba(193, 155, 135, 0.15);
+    border: 1px solid rgba(51, 65, 85, 0.15);
     font-weight: 500;
 }
 
@@ -253,7 +256,7 @@ p {
 
 .contact-info span:hover,
 .social-links span:hover {
-    background: #fcf9f2;
+    background: var(--bg-primary);
     transform: translateY(-2px);
     box-shadow: 0 4px 8px rgba(109, 73, 59, 0.1);
 }
@@ -264,7 +267,7 @@ p {
 }
 
 .resume-contact a:hover {
-    color: #c19b87;
+    color: var(--text-secondary);
 }
 
 
@@ -281,7 +284,7 @@ p {
     flex-wrap: wrap;
     position: sticky;
     top: 0;
-    background: #fcf9f2;
+    background: var(--bg-primary);
     z-index: 10;
     flex-shrink: 0;
 }
@@ -296,28 +299,28 @@ p {
 .mobile-menu-button {
     display: none;
     background: #f9f5f2;
-    border: 2px solid #e4b696;
+    border: 2px solid var(--bg-secondary);
     padding: 12px 15px;
     border-radius: 25px;
     cursor: pointer;
     transition: all 0.3s ease;
     font-weight: 600;
-    color: #6d493b;
-    font-family: "Aboreto", system-ui;
+    color: var(--text-primary);
+    font-family: "Inter", sans-serif;
     margin-bottom: 10px;
     position: sticky;
     top: 0;
-    background: #fcf9f2;
+    background: var(--bg-primary);
     z-index: 11;
     width: fit-content;
 }
 
 .mobile-menu-button:hover {
-    background: rgba(193, 155, 135, 0.1);
-    border-color: #c19b87;
-    color: #c19b87;
+    background: rgba(51, 65, 85, 0.1);
+    border-color: var(--text-secondary);
+    color: var(--text-secondary);
     transform: translateY(-2px);
-    box-shadow: 0 4px 8px rgba(193, 155, 135, 0.2);
+    box-shadow: 0 4px 8px rgba(51, 65, 85, 0.2);
 }
 
 .mobile-menu-button i {
@@ -325,32 +328,32 @@ p {
 }
 
 .nav-button {
-    background: #f9f5f2;
-    border: 2px solid #e4b696;
+    background: transparent;
+    border: 1px solid var(--border);
     padding: 12px 20px;
     border-radius: 25px;
     cursor: pointer;
     transition: all 0.3s ease;
     font-weight: 600;
-    color: #6d493b;
+    color: var(--text-primary);
     white-space: nowrap;
-    font-family: "Aboreto", system-ui;
+    font-family: "Inter", sans-serif;
 }
 
 .nav-button:hover {
-    background: rgba(193, 155, 135, 0.1);
-    border-color: #c19b87;
-    color: #c19b87;
+    background: rgba(51, 65, 85, 0.1);
+    border-color: var(--text-secondary);
+    color: var(--text-secondary);
     transform: translateY(-2px);
-    box-shadow: 0 4px 8px rgba(193, 155, 135, 0.2);
+    box-shadow: 0 4px 8px rgba(51, 65, 85, 0.2);
 }
 
 .nav-button.active {
-    background: linear-gradient(135deg, #c19b87, #e4b696);
-    border-color: #c19b87;
+    background: var(--surface);
+    border-color: var(--text-secondary);
     color: white;
     transform: translateY(-2px);
-    box-shadow: 0 4px 8px rgba(193, 155, 135, 0.3);
+    box-shadow: 0 4px 8px rgba(51, 65, 85, 0.3);
 }
 
 /* Content Area */
@@ -368,13 +371,13 @@ p {
     justify-content: space-between;
     padding: 15px 20px;
     margin-bottom: 20px;
-    background: linear-gradient(135deg, #c19b87, #e4b696);
+    background: var(--surface);
     color: white;
     border-radius: 12px;
-    font-family: "Aboreto", system-ui;
+    font-family: "Inter", sans-serif;
     font-weight: 600;
     font-size: 1.2em;
-    box-shadow: 0 3px 10px rgba(193, 155, 135, 0.3);
+    box-shadow: 0 3px 10px rgba(51, 65, 85, 0.3);
     position: sticky;
     top: -20px;
     z-index: 5;
@@ -455,7 +458,7 @@ p {
     padding: 20px;
     background: #f9f5f2;
     border-radius: 8px;
-    border-left: 4px solid #c19b87;
+    border-left: 4px solid var(--text-secondary);
     box-shadow: 0 2px 8px rgba(109, 73, 59, 0.05);
     overflow: hidden;
 }
@@ -463,7 +466,7 @@ p {
 
 
 .section-content {
-    color: #6d493b;
+    color: var(--text-primary);
 }
 
 /* Professional Summary List */
@@ -481,7 +484,7 @@ p {
 
 .summary-list li::before {
     content: "▶";
-    color: #c19b87;
+    color: var(--text-secondary);
     font-size: 0.8em;
     position: absolute;
     left: -20px;
@@ -489,7 +492,7 @@ p {
 }
 
 .summary-list li strong {
-    color: #6d493b;
+    color: var(--text-primary);
 }
 
 /* ===========================
@@ -528,7 +531,7 @@ p {
     right: 0;
     width: 100px;
     height: 100px;
-    background: linear-gradient(45deg, rgba(193, 155, 135, 0.1), rgba(228, 182, 150, 0.05));
+    background: var(--surface);
     border-radius: 50%;
     transform: translate(50%, -50%);
 }
@@ -536,7 +539,7 @@ p {
 .about-layout p {
     font-size: 16px;
     line-height: 1.7;
-    color: #6d493b;
+    color: var(--text-primary);
     margin: 0;
     text-align: justify;
     position: relative;
@@ -558,12 +561,12 @@ p {
     font-style: italic;
     text-align: center;
     font-weight: 600;
-    color: #c19b87;
+    color: var(--text-secondary);
     margin-top: 10px;
     padding: 15px;
-    background: rgba(193, 155, 135, 0.1);
+    background: rgba(51, 65, 85, 0.1);
     border-radius: 8px;
-    border: 1px solid rgba(193, 155, 135, 0.2);
+    border: 1px solid rgba(51, 65, 85, 0.2);
 }
 
 .left-sidebar {
@@ -572,7 +575,7 @@ p {
     flex-direction: column;
     gap: 8px;
     padding-right: 20px;
-    border-right: 2px solid rgba(193, 155, 135, 0.3);
+    border-right: 2px solid rgba(51, 65, 85, 0.3);
 }
 .right-sidebar {
     flex: 0 0 200px;
@@ -580,7 +583,7 @@ p {
     flex-direction: column;
     gap: 8px;
     padding-left: 20px;
-    border-left: 2px solid rgba(193, 155, 135, 0.3);
+    border-left: 2px solid rgba(51, 65, 85, 0.3);
 }
 
 .job-content {
@@ -590,19 +593,19 @@ p {
 .job-title {
     font-size: 1em;
     font-weight: bold;
-    color: #6d493b;
+    color: var(--text-primary);
     margin: 0 0 10px 0;
 }
 
 .job-company {
     font-weight: 600;
-    color: #c19b87;
+    color: var(--text-secondary);
     font-size: 1em;
     display: block;
 }
 
 .job-date {
-    color: #6d493b;
+    color: var(--text-primary);
     font-style: italic;
     font-size: 0.9em;
     display: block;
@@ -621,7 +624,7 @@ p {
 
 .job-responsibilities li::before {
     content: "▶";
-    color: #c19b87;
+    color: var(--text-secondary);
     font-size: 0.8em;
     position: absolute;
     left: -20px;
@@ -638,19 +641,19 @@ p {
 .degree {
     font-size: 1.1em;
     font-weight: bold;
-    color: #6d493b;
+    color: var(--text-primary);
     margin: 0 0 5px 0;
 }
 
 .school {
     font-weight: 600;
-    color: #c19b87;
+    color: var(--text-secondary);
     display: block;
     margin-bottom: 5px;
 }
 
 .graduation-date {
-    color: #6d493b;
+    color: var(--text-primary);
     font-style: italic;
     display: block;
     margin-bottom: 10px;
@@ -658,7 +661,7 @@ p {
 
 .education-details {
     margin: 0;
-    color: #6d493b;
+    color: var(--text-primary);
 }
 
 /* ===========================
@@ -674,7 +677,7 @@ p {
 .skill-category h4 {
     font-size: 1.1em;
     font-weight: bold;
-    color: #6d493b;
+    color: var(--text-primary);
     margin: 0 0 10px 0;
 }
 
@@ -685,7 +688,7 @@ p {
 }
 
 .skill-tag {
-    background: linear-gradient(135deg, #c19b87, #e4b696);
+    background: var(--surface);
     color: white;
     padding: 6px 12px;
     border-radius: 20px;
@@ -697,7 +700,7 @@ p {
 
 .skill-tag:hover {
     transform: translateY(-2px);
-    box-shadow: 0 4px 8px rgba(193, 155, 135, 0.3);
+    box-shadow: 0 4px 8px rgba(51, 65, 85, 0.3);
 }
 
 /* ===========================
@@ -718,13 +721,13 @@ p {
 .project-title {
     font-size: 1.1em;
     font-weight: bold;
-    color: #6d493b;
+    color: var(--text-primary);
     margin: 0 0 5px 0;
 }
 
 .project-tech {
-    background: rgba(193, 155, 135, 0.1);
-    color: #c19b87;
+    background: rgba(51, 65, 85, 0.1);
+    color: var(--text-secondary);
     padding: 3px 8px;
     border-radius: 12px;
     font-size: 0.85em;
@@ -735,7 +738,7 @@ p {
 
 .project-description {
     margin: 0;
-    color: #6d493b;
+    color: var(--text-primary);
     line-height: 1.5;
 }
 
@@ -744,7 +747,7 @@ p {
     display: inline-flex;
     align-items: center;
     gap: 8px;
-    background: linear-gradient(135deg, #6d493b, #c19b87);
+    background: var(--surface);
     color: white;
     padding: 10px 15px;
     border-radius: 25px;
@@ -756,7 +759,7 @@ p {
 }
 
 .github-link:hover {
-    background: linear-gradient(135deg, #c19b87, #e4b696);
+    background: var(--surface);
     transform: translateY(-2px);
     box-shadow: 0 4px 8px rgba(109, 73, 59, 0.3);
 }
@@ -825,8 +828,8 @@ p {
     top: calc(100% + 5px);
     left: 0;
     right: 0;
-    background: #fcf9f2;
-    border: 2px solid #e4b696;
+    background: var(--bg-primary);
+    border: 2px solid var(--accent);
     border-radius: 12px;
     padding: 15px;
     box-shadow: 0 4px 12px rgba(109, 73, 59, 0.2);
@@ -885,7 +888,7 @@ p {
         max-height: none;
         height: auto;
         border-radius: 12px;
-        border-left: 3px solid #c19b87;
+        border-left: 3px solid var(--text-secondary);
     }
     
     .sidebar-top {
@@ -952,9 +955,9 @@ p {
     .mobile-section-title {
         font-size: 1.1em;
         font-weight: bold;
-        color: #6d493b;
+        color: var(--text-primary);
         margin-bottom: 4px;
-        font-family: "Aboreto", system-ui;
+        font-family: "Inter", sans-serif;
     }
     
     .mobile-section-desc {
@@ -973,7 +976,7 @@ p {
         top: 50%;
         transform: translateY(-50%);
         font-size: 1.2em;
-        color: #c19b87;
+        color: var(--text-secondary);
     }
     
     /* Active state adjustments for mobile */
@@ -999,7 +1002,7 @@ p {
         flex: none;
         border-right: none;
         border-left: none;
-        border-bottom: 2px solid rgba(193, 155, 135, 0.3);
+        border-bottom: 2px solid rgba(51, 65, 85, 0.3);
         padding-right: 0;
         padding-left: 0;
         padding-bottom: 15px;
@@ -1085,9 +1088,9 @@ p {
     
     .resume-picture {
         width: 120px;
-        height: 160px;
+        height: 120px;
         max-width: 120px;
-        max-height: 160px;
+        max-height: 120px;
     }
     
     .contact-header {

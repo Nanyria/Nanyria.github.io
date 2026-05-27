@@ -3,13 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nathalee Wilund | Full-Stack Developer</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Aboreto&family=Poppins&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="CSS/resume.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <script src="JavaScript/resume.js"></script>
-    <title>Resume - Nathalee Wilund</title>
 </head>
 <body>
     <div class="resume-container">
@@ -32,19 +32,27 @@
                                 </h3>
                             </div>
                             <div class="social-links">
-                                <span><a href="https://www.linkedin.com/in/nathalee-wilund-048bab143" target="_blank"><i class="fab fa-linkedin"></i></a></span>
-                                <span><a href="https://github.com/Nanyria" target="_blank"><i class="fa-brands fa-square-github"></i></a></span>
+                                <span>
+                                    <a href="https://www.linkedin.com/in/nathalee-wilund-048bab143" target="_blank"><i class="fab fa-linkedin"></i></a>
+                                </span>
+                                <span>
+                                    <a href="https://github.com/Nanyria" target="_blank"><i class="fa-brands fa-square-github"></i></a>
+                                </span>
                             </div>
                             <div class="contact-info">
-                                <span><i class="fas fa-envelope"></i> nathaleewi@hotmail.com</span>
-                                <span><i class="fas fa-phone"></i> (+46) 727032703</span>
+                                <span>
+                                    <i class="fas fa-envelope"></i> nathaleewi@hotmail.com
+                                </span>
+                                <span>
+                                    <i class="fas fa-phone"></i> (+46) 727032703
+                                </span>
                             </div>
 
                         </div>
 
                     </div>
                     <div class="picture-section">
-                     <img src="../images/resume-photo.svg" alt="Profile Picture" class="resume-picture">
+                     <img src="../images/ProfilePicture.svg" alt="Profile Picture" class="resume-picture">
                     </div>
                 </div>
                 
@@ -55,12 +63,25 @@
                         <section class="resume-section">
                             <div class="section-content">
                                 <ul class="summary-list">
-                                    <li><strong>Full-stack developer and educator</strong> with expertise in .NET ecosystem and modern web technologies</li>
-                                    <li><strong>Recent graduate</strong> from System Development .NET program at Campus Varberg (June 2025), complemented by hands-on experience during internship at Aire ENERGY</li>
-                                    <li><strong>Technical expertise</strong> in C#, ASP.NET Core, Angular, and Entity Framework, with strong pedagogical foundation from Uppsala University</li>
-                                    <li><strong>Proven development skills</strong> including library management systems with JWT authentication, database migrations, and API development</li>
-                                    <li><strong>Passionate about</strong> clean code architecture, design patterns, and creating user-centered solutions</li>
-                                    <li><strong>Actively seeking opportunities</strong> to apply both technical expertise and educational experience in a dynamic development role</li>
+                                    <li>
+                                        Backend developer with experience in .NET/C# payment systems,
+                                        PSP integrations, and modular architecture.
+                                    </li>
+
+                                    <li>
+                                        Passionate about clean architecture, maintainable backend systems,
+                                        and continuous learning.
+                                    </li>
+
+                                    <li>
+                                        Experience working with REST APIs, OAuth2 authentication,
+                                        Entity Framework Core, and Angular.
+                                    </li>
+
+                                    <li>
+                                        Strong communication and collaboration skills supported by
+                                        a background in education.
+                                    </li>
                                 </ul>
                             </div>
                         </section>
@@ -73,7 +94,7 @@
                 <!-- Section Navigation Buttons -->
                 <nav class="section-nav">
                     <button class="nav-button" onclick="showSection('experience')"><i class="fas fa-briefcase"></i> Work Experience</button>
-                    <button class="nav-button active" onclick="showSection('about')"><i class="fas fa-user"></i> About</button>
+                    <!-- <button class="nav-button active" onclick="showSection('about')"><i class="fas fa-user"></i> About</button> -->
                     <button class="nav-button" onclick="showSection('education')"><i class="fas fa-graduation-cap"></i> Education</button>
                     <button class="nav-button" onclick="showSection('skills')"><i class="fas fa-code"></i> Technical Skills</button>
                     <button class="nav-button" onclick="showSection('projects')"><i class="fas fa-project-diagram"></i> Projects</button>
@@ -90,21 +111,38 @@
                         <div class="experience-item">
                             <div class="job-layout">
                                 <div class="left-sidebar">
-                                    <span class="job-company">Aire ENERGY</span>
-                                    <span class="job-date">2024/11/05 - 2025/05/01</span>
+                                    <span class="job-company">Convene Mobility</span>
+                                    <span class="job-date">2026 - Present</span>
                                 </div>
                                 <div class="job-content">
-                                    <h3 class="job-title">Internship</h3>
+                                    <h3 class="job-title">Backend Developer (.NET / Payments)</h3>
                                     <ul class="job-responsibilities">
-                                        <li>Programming backend development using C#</li>
-                                        <li>Frontend development with Angular framework</li>
-                                        <li>Gained hands-on experience in full-stack development</li>
+                                        <li>Part of a backend team modernizing a legacy payment platform and implementing a new PSP integration (Viva Payments) using a modular, provider-based architecture aligned with clean architecture principles.</li>
+                                        <li>Developed PSP integrations in C#/.NET, including OAuth2 authentication and secure token lifecycle management.</li>
+                                        <li>Refactored tightly coupled payment flows into decoupled provider abstractions supporting multiple PSPs, including Viva and Windcave.</li>
+                                        <li>Built integration, flow, and validation tests using xUnit, fake handlers, smoke tests, and Postman.</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="experience-item">
+                            <div class="job-layout">
+                                <div class="left-sidebar">
+                                    <span class="job-company">Aire ENERGY</span>
+                                    <span class="job-date">2024 - 2025</span>
+                                </div>
+                                <div class="job-content">
+                                    <h3 class="job-title">Software Developer Intern</h3>
+                                    <ul class="job-responsibilities">
+                                        <li>Developed backend functionality in C#/.NET and frontend features in Angular.</li>
+                                        <li>Worked with REST APIs and modular application structure in a collaborative development environment.</li>
+                                        <li>Gained hands-on experience with full-stack workflows and agile development practices.</li>
                                     </ul>
                                 </div>
                             </div>
                         </div>
 
-                        <div class="experience-item">
+                        <!-- <div class="experience-item">
                             <div class="job-layout">
                                 <div class="left-sidebar">
                                     <span class="job-company">Forex</span>
@@ -119,7 +157,7 @@
                                     </ul>
                                 </div>
                             </div>
-                        </div>
+                        </div> -->
 
                         <div class="experience-item">
                             <div class="job-layout">
@@ -128,18 +166,16 @@
                                     <span class="job-date">2020 - 2023</span>
                                 </div>
                                 <div class="job-content">
-                                    <h3 class="job-title">Teacher</h3>
+                                    <h3 class="job-title">Educator – Multiple Schools</h3>
                                     <ul class="job-responsibilities">
-                                        <li><strong>Year 7-9:</strong> Kunskapsskolan Varberg</li>
-                                        <li><strong>Year 4-6:</strong> Frillessås Elementary, Almers Elementary, Nyhemsskolan Elementary</li>
-                                        <li>Developed lesson plans and educational materials for different age groups</li>
-                                        <li>Managed classroom environments and student progress assessment</li>
+                                        <li>Planned and delivered structured learning experiences for students in grades 4–6 across multiple subjects.</li>
+                                        <li>Developed strong communication, adaptability, and problem-solving skills through work with diverse student needs.</li>
                                     </ul>
                                 </div>
                             </div>
                         </div>
 
-                        <div class="experience-item">
+                        <!-- <div class="experience-item">
                             <div class="job-layout">
                                 <div class="left-sidebar">
                                     <span class="job-company">Swedish Social Insurance Agency</span>
@@ -154,11 +190,11 @@
                                     </ul>
                                 </div>
                             </div>
-                        </div>
+                        </div> -->
                     </div>
 
                     <!-- About Content -->
-                    <div id="about-content" class="section-content">
+                    <!-- <div id="about-content" class="section-content">
                         <section class="about-layout">
 
                                 <p>I'm a recent graduate eager to dive into the world of programming with the knowledge and passion I've built over the past two years of study.</p>
@@ -170,7 +206,7 @@
                                 <p>For me, programming isn't just a career, it's a hobby.</p>
 
                         </section>
-                    </div>
+                    </div> -->
                     <!-- Education Content -->
                     <div id="education-content" class="section-content">
                         <div class="education-item">
@@ -185,15 +221,15 @@
                             <span class="graduation-date">2016 - 2020</span>
                         </div>
                     </br>
-                             <div class="education-item">
-                            <h3 class="degree">Additional courses taken in IT</h3>
+                        <div class="education-item">
+                            <h3 class="degree">Additional Coursework in IT</h3>
                              <h4>Introduction to Python</h4>
                             <span class="school">Högskolan i Gävle</span>
                             <span class="graduation-date">2024</span>
                         </div>
 
                             <div class="education-item">
-                             <h4>Cyber Security</h4>
+                             <h4>Cybersecurity</h4>
                             <span class="school">Linköpings Universitet</span>
                             <span class="graduation-date">2024</span>
                        </div>
@@ -215,18 +251,18 @@
                                 <h4>Web Technologies</h4>
                                 <div class="skill-tags">
                                     <span class="skill-tag">HTML/CSS</span>
-                                    <span class="skill-tag">ASP.NET Core</span>
                                     <span class="skill-tag">Angular</span>
-                                    <span class="skill-tag">Angular CLI</span>
                                 </div>
                             </div>
                             <div class="skill-category">
                                 <h4>Backend & APIs</h4>
                                 <div class="skill-tags">
-                                    <span class="skill-tag">Entity Framework Core</span>
+                                    <span class="skill-tag">ASP.NET Core</span>
+                                    <span class="skill-tag">REST APIs</span>
                                     <span class="skill-tag">ASP.NET Identity</span>
                                     <span class="skill-tag">JWT Authentication</span>
                                     <span class="skill-tag">Swagger/OpenAPI</span>
+                                    <span class="skill-tag">OAuth2</span>
                                     <span class="skill-tag">AutoMapper</span>
                                 </div>
                             </div>
@@ -234,19 +270,20 @@
                                 <h4>Database & Tools</h4>
                                 <div class="skill-tags">
                                     <span class="skill-tag">SQL Server</span>
+                                    <span class="skill-tag">Entity Framework Core</span>
                                     <span class="skill-tag">Entity Framework Migrations</span>
                                     <span class="skill-tag">Git</span>
-                                    <span class="skill-tag">Canva</span>
-                                    <span class="skill-tag">Figma</span>
+                                    <span class="skill-tag">Postman</span>
+                                    <span class="skill-tag">xUnit</span>
                                 </div>
                             </div>
                             <div class="skill-category">
-                                <h4>Design Patterns & Architecture</h4>
+                                <h4>Architecture</h4>
                                 <div class="skill-tags">
-                                    <span class="skill-tag">Repository Pattern</span>
+                                    <span class="skill-tag">Clean Architecture</span>
+                                    <span class="skill-tag">SOLID Principles</span>
                                     <span class="skill-tag">Dependency Injection</span>
-                                    <span class="skill-tag">MVC Architecture</span>
-                                    <span class="skill-tag">RESTful APIs</span>
+                                    <span class="skill-tag">Repository Pattern</span>
                                 </div>
                             </div>
                         </div>
@@ -254,6 +291,18 @@
 
                     <!-- Projects Content -->
                     <div id="projects-content" class="section-content">
+                        <div class="project-item">
+                            <div class="job-layout">
+                                <div class="job-content">
+                                    <h3 class="project-title">PlsEnergyDirector — Revenue Chart</h3>
+                                    <span class="project-tech">Angular, TypeScript, Highcharts</span>
+                                    <p class="project-description">Implemented interactive revenue charts in the Angular frontend using Highcharts to visualise generated revenues. Features include tooltips, zoom, export, and efficient rendering for large datasets.</p>
+                                </div>
+                                <div class="right-sidebar">
+                                </div>
+                            </div>
+                        </div>
+
                         <div class="project-item">
                             <div class="job-layout">
                                 <div class="job-content">

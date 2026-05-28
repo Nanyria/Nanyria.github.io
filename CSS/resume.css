@@ -120,7 +120,7 @@ p {
 .sidebar-top {
     display: flex;
     flex-direction: column;
-    gap: 22px;
+    gap: 26px;
 }
 
 .contact-section {
@@ -136,14 +136,14 @@ p {
 }
 
 .resume-picture {
-    width: min(280px, 100%);
+    width: min(260px, 100%);
     aspect-ratio: 4/4;
-    border: 1px solid rgba(248, 245, 242, 0.14);
-    border-radius: 18px;
+    border: 1px solid var(--border);
+    border-radius: 22px;
     object-fit: cover;
     box-shadow:
-        0 18px 44px rgba(0, 0, 0, 0.36),
-        0 0 32px rgba(249, 115, 22, 0.1);
+        0 22px 55px rgba(0, 0, 0, 0.34),
+        0 0 36px rgba(var(--accent-rgb), 0.09);
 }
 
 .resume-picture p {
@@ -152,7 +152,7 @@ p {
 }
 
 .resume-name {
-    font-size: 2.3em;
+    font-size: clamp(2rem, 3vw, 2.35rem);
     font-weight: 800;
     color: var(--text-primary);
     margin: 0;
@@ -161,7 +161,7 @@ p {
 }
 
 .resume-title {
-    font-size: 1em;
+    font-size: 0.98em;
     font-weight: 500;
     font-style: italic;
     color: var(--text-secondary);
@@ -172,28 +172,30 @@ p {
 .resume-contact {
     display: flex;
     flex-direction: column;
-    gap: 0px;
+    gap: 12px;
     font-size: 0.9em;
     color: var(--text-primary);
     padding: 18px;
-    background: var(--surface-soft);
-    border-radius: 8px;
+    background:
+        linear-gradient(180deg, rgba(255, 255, 255, 0.045), rgba(255, 255, 255, 0.02)),
+        var(--surface-soft);
+    border-radius: 16px;
     border: 1px solid var(--border);
-    margin: 22px 0 0;
-    backdrop-filter: blur(10px);
-    box-shadow: 0 18px 45px rgba(0, 0, 0, 0.22);
+    margin: 24px 0 0;
+    backdrop-filter: blur(18px);
+    box-shadow: 0 18px 45px rgba(0, 0, 0, 0.2);
 }
 
 .contact-section-header {
     text-align: center;
-    margin-bottom: 10px;
-    padding-bottom: 15px;
-    border-bottom: 1px solid rgba(248, 245, 242, 0.1);
+    margin-bottom: 2px;
+    padding-bottom: 14px;
+    border-bottom: 1px solid var(--border);
 }
 
 .contact-title {
     font-family: "Inter", sans-serif;
-    font-size: 1.1em;
+    font-size: 0.78rem;
     font-weight: 600;
     color: var(--text-primary);
     margin: 0;
@@ -202,18 +204,18 @@ p {
     justify-content: center;
     gap: 10px;
     text-transform: uppercase;
-    letter-spacing: 0.08em;
+    letter-spacing: 0.12em;
 }
 
 .contact-title i {
-    color: var(--accent-strong);
+    color: var(--accent-soft);
     font-size: 1.2em;
 }
 
 .contact-info {
     display: flex;
     flex-direction: column;
-    gap: 5px;
+    gap: 8px;
     flex: 1;
     z-index: 11;
 }
@@ -228,7 +230,7 @@ p {
 
 .social-links {
     display: flex;
-    gap: 5px;
+    gap: 10px;
     align-items: center;
     justify-content: flex-start;
     z-index: 11;
@@ -237,13 +239,13 @@ p {
 }
 
 .contact-info span {
-    padding: 11px 13px;
-    border-radius: 8px;
+    padding: 12px 14px;
+    border-radius: 12px;
     align-items: center;
     display: flex;
     gap: 10px;
-    background: rgba(248, 245, 242, 0.055);
-    border: 1px solid rgba(248, 245, 242, 0.09);
+    background: rgba(255, 255, 255, 0.045);
+    border: 1px solid transparent;
     font-weight: 500;
 }
 
@@ -254,9 +256,9 @@ p {
 
 .social-links span {
     padding: 0;
-    border-radius: 8px;
-    width: 36px;
-    height: 36px;
+    border-radius: 12px;
+    width: 38px;
+    height: 38px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -279,7 +281,7 @@ p {
 
 .contact-info span:hover,
 .social-links span:hover {
-    background: linear-gradient(135deg, rgba(249, 115, 22, 0.16), rgba(251, 146, 60, 0.08));
+    background: linear-gradient(135deg, rgba(var(--accent-rgb), 0.14), rgba(var(--accent-soft-rgb), 0.07));
     transform: translateY(-2px);
     box-shadow: 0 10px 24px var(--shadow-warm);
 }
@@ -301,13 +303,14 @@ p {
 /* Section Navigation */
 .section-nav {
     display: flex;
-    gap: 12px;
-    margin-bottom: 28px;
-    padding: 8px 0 18px;
+    gap: 10px;
+    margin-bottom: 34px;
+    padding: 4px 0 20px;
     flex-wrap: wrap;
     position: sticky;
     top: 0;
-    background: var(--bg-primary);
+    background: linear-gradient(180deg, rgba(11, 11, 12, 0.96), rgba(11, 11, 12, 0.78) 72%, transparent);
+    backdrop-filter: blur(14px);
     z-index: 10;
     flex-shrink: 0;
 }
@@ -321,8 +324,8 @@ p {
 /* Mobile Menu Button */
 .mobile-menu-button {
     display: none;
-    background: #f9f5f2;
-    border: 2px solid var(--bg-secondary);
+    background: rgba(255, 255, 255, 0.045);
+    border: 1px solid var(--border);
     padding: 12px 15px;
     border-radius: 12px;
     cursor: pointer;
@@ -339,8 +342,8 @@ p {
 }
 
 .mobile-menu-button:hover {
-    background: var(--accent-soft);
-    border-color: rgba(251, 146, 60, 0.45);
+    background: rgba(var(--accent-rgb), 0.12);
+    border-color: rgba(var(--accent-soft-rgb), 0.34);
     color: var(--text-primary);
     transform: translateY(-2px);
     box-shadow: 0 12px 28px var(--shadow-warm);
@@ -351,32 +354,32 @@ p {
 }
 
 .nav-button {
-    background: rgba(26, 26, 26, 0.72);
+    background: rgba(255, 255, 255, 0.04);
     border: 1px solid var(--border);
-    padding: 10px 16px;
+    padding: 10px 15px;
     border-radius: 999px;
     cursor: pointer;
-    transition: all 0.3s ease;
-    font-weight: 600;
+    transition: background 0.2s ease, border-color 0.2s ease, color 0.2s ease, transform 0.2s ease, box-shadow 0.2s ease;
+    font-weight: 650;
     color: var(--text-primary);
     white-space: nowrap;
     font-family: "Inter", sans-serif;
 }
 
 .nav-button:hover {
-    background: linear-gradient(135deg, rgba(249, 115, 22, 0.16), rgba(251, 146, 60, 0.08));
-    border-color: rgba(251, 146, 60, 0.42);
+    background: rgba(var(--accent-rgb), 0.1);
+    border-color: rgba(var(--accent-soft-rgb), 0.34);
     color: var(--text-primary);
     transform: translateY(-2px);
-    box-shadow: 0 12px 28px var(--shadow-warm);
+    box-shadow: 0 10px 24px rgba(var(--accent-rgb), 0.12);
 }
 
 .nav-button.active {
-    background: linear-gradient(135deg, rgba(249, 115, 22, 0.22), rgba(251, 146, 60, 0.1));
-    border-color: rgba(251, 146, 60, 0.55);
+    background: linear-gradient(135deg, rgba(var(--accent-rgb), 0.18), rgba(var(--accent-soft-rgb), 0.08));
+    border-color: rgba(var(--accent-soft-rgb), 0.45);
     color: var(--text-primary);
     transform: translateY(-2px);
-    box-shadow: 0 14px 34px var(--shadow-warm);
+    box-shadow: 0 12px 28px rgba(var(--accent-rgb), 0.14);
 }
 
 /* Content Area */
@@ -384,7 +387,7 @@ p {
     position: relative;
     flex: 1;
     overflow-y: auto;
-    padding-bottom: 20px;
+    padding-bottom: 28px;
 }
 
 /* Content Section Header for Mobile */
@@ -394,9 +397,9 @@ p {
     justify-content: space-between;
     padding: 15px 20px;
     margin-bottom: 20px;
-    background: var(--surface);
+    background: var(--surface-elevated);
     color: white;
-    border-radius: 12px;
+    border-radius: 16px;
     font-family: "Inter", sans-serif;
     font-weight: 600;
     font-size: 1.2em;
@@ -451,7 +454,7 @@ p {
     overflow-y: auto;
     overflow-x: hidden;
     padding: 0;
-    margin-top: 28px;
+    margin-top: 30px;
     z-index: 11;
 }
 
@@ -478,11 +481,13 @@ p {
 /* Resume Sections */
 .resume-section {
     margin-bottom: 0;
-    padding: 18px;
-    background: var(--surface-soft);
-    border-radius: 8px;
+    padding: 20px;
+    background:
+        linear-gradient(180deg, rgba(255, 255, 255, 0.04), rgba(255, 255, 255, 0.018)),
+        var(--surface-soft);
+    border-radius: 16px;
     border: 1px solid var(--border);
-    box-shadow: 0 18px 45px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 18px 45px rgba(0, 0, 0, 0.18);
     overflow: hidden;
 }
 
@@ -498,10 +503,10 @@ p {
 }
 
 .summary-list li {
-    margin-bottom: 12px;
+    margin-bottom: 14px;
     position: relative;
     padding-left: 18px;
-    line-height: 1.5;
+    line-height: 1.6;
 }
 
 .summary-list li::before {
@@ -524,9 +529,9 @@ p {
    =========================== */
 
 .experience-item {
-    margin-bottom: 28px;
-    padding-bottom: 28px;
-    border-bottom: 1px solid rgba(248, 245, 242, 0.08);
+    margin-bottom: 32px;
+    padding-bottom: 32px;
+    border-bottom: 1px solid var(--border);
 }
 
 .experience-item:last-child {
@@ -536,7 +541,7 @@ p {
 
 .job-layout {
     display: flex;
-    gap: 34px;
+    gap: clamp(24px, 3vw, 40px);
     align-items: stretch;
 }
 .about-layout {
@@ -588,26 +593,26 @@ p {
     color: var(--text-secondary);
     margin-top: 10px;
     padding: 15px;
-    background: rgba(248, 245, 242, 0.055);
-    border-radius: 8px;
-    border: 1px solid rgba(248, 245, 242, 0.09);
+    background: rgba(255, 255, 255, 0.045);
+    border-radius: 16px;
+    border: 1px solid var(--border);
 }
 
 .left-sidebar {
-    flex: 0 0 200px;
+    flex: 0 0 190px;
     display: flex;
     flex-direction: column;
-    gap: 8px;
-    padding-right: 20px;
-    border-right: 1px solid rgba(248, 245, 242, 0.1);
+    gap: 10px;
+    padding-right: 24px;
+    border-right: 1px solid var(--border);
 }
 .right-sidebar {
-    flex: 0 0 200px;
+    flex: 0 0 190px;
     display: flex;
     flex-direction: column;
-    gap: 8px;
-    padding-left: 20px;
-    border-left: 1px solid rgba(248, 245, 242, 0.1);
+    gap: 10px;
+    padding-left: 24px;
+    border-left: 1px solid var(--border);
 }
 
 .job-content {
@@ -615,21 +620,21 @@ p {
 }
 
 .job-title {
-    font-size: 1.03em;
+    font-size: 1.08rem;
     font-weight: 700;
     color: var(--text-primary);
-    margin: 0 0 10px 0;
+    margin: 0 0 12px 0;
 }
 
 .job-company {
     font-weight: 600;
     color: var(--accent);
-    font-size: 1em;
+    font-size: 0.96rem;
     display: block;
 }
 
 .job-date {
-    color: var(--text-primary);
+    color: var(--text-secondary);
     font-style: italic;
     font-size: 0.9em;
     display: block;
@@ -642,10 +647,11 @@ p {
 }
 
 .job-responsibilities li {
-    margin-bottom: 8px;
+    margin-bottom: 10px;
     position: relative;
-    font-size: 0.9em;
+    font-size: 0.94rem;
     padding-left: 18px;
+    color: rgba(248, 245, 242, 0.92);
 }
 
 .job-responsibilities li::before {
@@ -664,12 +670,12 @@ p {
    =========================== */
 
 .education-item {
-    margin-bottom: 20px;
+    margin-bottom: 24px;
 }
 
 .degree {
-    font-size: 1.1em;
-    font-weight: bold;
+    font-size: 1.08rem;
+    font-weight: 700;
     color: var(--text-primary);
     margin: 0 0 5px 0;
 }
@@ -699,30 +705,30 @@ p {
 
 .skills-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 20px;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 24px;
 }
 
 .skill-category h4 {
-    font-size: 1.1em;
+    font-size: 0.95rem;
     font-weight: 700;
     color: var(--text-primary);
-    margin: 0 0 10px 0;
+    margin: 0 0 12px 0;
 }
 
 .skill-tags {
     display: flex;
     flex-wrap: wrap;
-    gap: 8px;
+    gap: 9px;
 }
 
 .skill-tag {
-    background: rgba(248, 245, 242, 0.055);
+    background: rgba(255, 255, 255, 0.045);
     color: var(--text-primary);
-    padding: 6px 12px;
+    padding: 7px 12px;
     border-radius: 999px;
-    border: 1px solid rgba(251, 146, 60, 0.16);
-    font-size: 0.9em;
+    border: 1px solid var(--border);
+    font-size: 0.88rem;
     font-weight: 500;
     transition: all 0.3s ease;
     cursor: default;
@@ -730,8 +736,9 @@ p {
 
 .skill-tag:hover {
     transform: translateY(-2px);
-    background: var(--accent-soft);
-    box-shadow: 0 10px 24px rgba(249, 115, 22, 0.12);
+    background: rgba(var(--accent-rgb), 0.12);
+    border-color: rgba(var(--accent-soft-rgb), 0.28);
+    box-shadow: 0 10px 24px rgba(var(--accent-rgb), 0.1);
 }
 
 /* ===========================
@@ -739,9 +746,9 @@ p {
    =========================== */
 
 .project-item {
-    margin-bottom: 20px;
-    padding-bottom: 15px;
-    border-bottom: 1px solid rgba(248, 245, 242, 0.08);
+    margin-bottom: 28px;
+    padding-bottom: 28px;
+    border-bottom: 1px solid var(--border);
 }
 
 .project-item:last-child {
@@ -750,17 +757,17 @@ p {
 }
 
 .project-title {
-    font-size: 1.1em;
+    font-size: 1.08rem;
     font-weight: 700;
     color: var(--text-primary);
     margin: 0 0 5px 0;
 }
 
 .project-tech {
-    background: var(--accent-soft);
+    background: rgba(var(--accent-rgb), 0.1);
     color: var(--text-secondary);
-    padding: 3px 8px;
-    border-radius: 12px;
+    padding: 5px 10px;
+    border-radius: 999px;
     font-size: 0.85em;
     font-weight: 500;
     display: inline-block;
@@ -778,11 +785,11 @@ p {
     display: inline-flex;
     align-items: center;
     gap: 8px;
-    background: var(--accent-soft);
+    background: rgba(var(--accent-rgb), 0.1);
     color: white;
     padding: 10px 15px;
     border-radius: 999px;
-    border: 1px solid rgba(251, 146, 60, 0.2);
+    border: 1px solid rgba(var(--accent-soft-rgb), 0.24);
     text-decoration: none;
     font-weight: 600;
     font-size: 0.9em;
@@ -791,7 +798,7 @@ p {
 }
 
 .github-link:hover {
-    background: rgba(251, 146, 60, 0.2);
+    background: rgba(var(--accent-rgb), 0.16);
     transform: translateY(-2px);
     box-shadow: 0 12px 28px var(--shadow-warm);
 }
@@ -896,9 +903,16 @@ p {
 
 /* Common mobile/tablet styles for screens 1024px and below */
 @media (max-width: 1024px) {
+    body, html {
+        overflow: auto;
+    }
+
     .resume-container {
-        margin: 10px;
-        padding: 15px;
+        position: relative;
+        inset: auto;
+        min-height: 100vh;
+        margin: 16px;
+        padding: 0;
     }
     
     .resume-layout {
@@ -908,25 +922,28 @@ p {
     }
     
     .resume-main {
-        padding: 15px;
+        padding: 0 22px 28px;
         order: 2;
+        overflow: visible;
+        height: auto;
     }
     
     .resume-sidebar {
         order: 1;
         position: static;
-        margin-bottom: 20px;
-        padding: 20px;
+        margin-bottom: 0;
+        padding: 24px;
         overflow-y: visible;
         max-height: none;
         height: auto;
-        border-radius: 12px;
-        border: 1px solid var(--border);
+        border-radius: 20px 20px 0 0;
+        border-right: none;
+        border-bottom: 1px solid var(--border);
     }
     
     .sidebar-top {
         flex-direction: column;
-        gap: 20px;
+        gap: 24px;
         align-items: center;
         text-align: center;
     }
@@ -950,7 +967,8 @@ p {
     }
     
     .sidebar-content-area {
-        padding: 15px 0;
+        padding: 0;
+        margin-top: 24px;
         height: auto;
         overflow: visible;
     }
@@ -959,7 +977,7 @@ p {
 /* Tablet screens (768px and below) - Additional mobile-specific styles */
 @media (max-width: 768px) {
     .resume-name {
-        font-size: 1.8em;
+        font-size: 1.9rem;
     }
     
     /* Content Section Header Mobile Styles */
@@ -1027,7 +1045,7 @@ p {
     
     .job-layout {
         flex-direction: column;
-        gap: 15px;
+        gap: 18px;
     }
     
     .left-sidebar,
@@ -1035,10 +1053,10 @@ p {
         flex: none;
         border-right: none;
         border-left: none;
-        border-bottom: 1px solid rgba(248, 245, 242, 0.1);
+        border-bottom: 1px solid var(--border);
         padding-right: 0;
         padding-left: 0;
-        padding-bottom: 15px;
+        padding-bottom: 16px;
     }
     
     .skills-grid {
@@ -1060,17 +1078,9 @@ p {
 
 /* Phone screens (480px and below) - Additional styles */
 @media (max-width: 480px) {
-    body, html {
-        overflow: auto;
-    }
-    
     .resume-container {
-        position: relative;
-        margin: 5px;
-        padding: 10px;
-        inset: auto;
-        height: auto;
-        min-height: 100vh;
+        margin: 8px;
+        border-radius: 16px;
     }
     
     .resume-layout {
@@ -1079,7 +1089,7 @@ p {
     }
     
     .resume-name {
-        font-size: 1.6em;
+        font-size: 1.65rem;
     }
     
     .section-title {
@@ -1116,14 +1126,15 @@ p {
     }
     
     .resume-sidebar {
-        padding: 15px;
+        padding: 18px;
+        border-radius: 16px 16px 0 0;
     }
     
     .resume-picture {
-        width: 120px;
-        height: 120px;
-        max-width: 120px;
-        max-height: 120px;
+        width: 140px;
+        height: 140px;
+        max-width: 140px;
+        max-height: 140px;
     }
     
     .contact-header {
@@ -1135,7 +1146,7 @@ p {
     .resume-contact {
         font-size: 0.8em;
         flex-direction: column;
-        gap: 5px;
+        gap: 8px;
     }
     
 
@@ -1156,7 +1167,7 @@ p {
     
     .resume-section {
         margin-bottom: 20px;
-        padding: 15px;
+        padding: 16px;
     }
     
     .resume-main {

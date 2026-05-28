@@ -27,6 +27,7 @@
                 <a href="#experience">Experience</a>
                 <a href="#projects">Projects</a>
                 <a href="#skills">Skills</a>
+                <a href="#education">Education</a>
                 <a href="#contact">Contact</a>
             </nav>
         </header>
@@ -42,38 +43,47 @@
                         REST APIs, OAuth2, and pragmatic full-stack delivery.
                     </p>
                     <div class="hero-actions" aria-label="Primary actions">
-                        <a class="button button-primary" href="#projects">
+                        <a class="button button-primary primary-button" href="#projects">
                             <i class="fa-solid fa-layer-group"></i>
                             View Projects
                         </a>
-                        <a class="button button-secondary" href="mailto:nathaleewi@hotmail.com">
+                        <a class="button button-secondary secondary-button" href="mailto:nathaleewi@hotmail.com">
                             <i class="fa-solid fa-paper-plane"></i>
                             Contact Me
                         </a>
-                        <button class="button button-ghost" type="button" onclick="window.print()">
+                        <button class="button button-tertiary tertiary-button" type="button" onclick="window.print()">
                             <i class="fa-solid fa-file-arrow-down"></i>
                             Download CV
                         </button>
                     </div>
                     <div class="social-row" aria-label="Social links">
-                        <a href="https://www.linkedin.com/in/nathalee-wilund-048bab143" target="_blank" rel="noreferrer" aria-label="LinkedIn">
+                        <a class="social-link" href="https://www.linkedin.com/in/nathalee-wilund-048bab143" target="_blank" rel="noreferrer" aria-label="LinkedIn">
                             <i class="fa-brands fa-linkedin"></i>
                         </a>
-                        <a href="https://github.com/Nanyria" target="_blank" rel="noreferrer" aria-label="GitHub">
+                        <a class="social-link" href="https://github.com/Nanyria" target="_blank" rel="noreferrer" aria-label="GitHub">
                             <i class="fa-brands fa-square-github"></i>
                         </a>
-                        <a href="mailto:nathaleewi@hotmail.com" aria-label="Email">
+                        <a class="social-link" href="mailto:nathaleewi@hotmail.com" aria-label="Email">
                             <i class="fa-solid fa-envelope"></i>
                         </a>
                     </div>
-                    <div class="expertise-pills" aria-label="Core expertise">
-                        <span>Payment Systems</span>
-                        <span>Clean Architecture</span>
-                        <span>REST APIs</span>
-                        <span>OAuth2</span>
-                        <span>.NET</span>
-                        <span>Integration Testing</span>
-                    </div>
+                </div>
+
+                <div class="hero-insights" aria-label="Engineering focus and stack">
+                    <article class="signal-card signal-card-top">
+                        <span class="mono">current_focus</span>
+                        <strong>Payments + APIs</strong>
+                        <p>Building reliable systems that scale.</p>
+                    </article>
+                    <article class="signal-card signal-card-bottom">
+                        <span class="mono">tech_stack</span>
+                        <strong>C# / .NET / Angular</strong>
+                        <div class="stack-badges" aria-label="Core stack">
+                            <span>C#</span>
+                            <span>.NET</span>
+                            <span>NG</span>
+                        </div>
+                    </article>
                 </div>
 
                 <div class="hero-visual" aria-label="Portrait and engineering highlights">
@@ -82,13 +92,37 @@
                         <span class="ambient ambient-two"></span>
                         <img src="images/ProfilePicture.svg" alt="Portrait of Nathalee Wilund">
                     </div>
-                    <div class="signal-card signal-card-top">
-                        <span class="mono">current_focus</span>
-                        <strong>Payments + APIs</strong>
+                </div>
+
+                <div class="hero-capabilities" aria-label="What I bring">
+                    <p class="eyebrow">What I Bring</p>
+                    <div class="capability-item">
+                        <i class="fa-solid fa-coins"></i>
+                        <div>
+                            <strong>Payment Systems</strong>
+                            <span>Secure, reliable payment platforms.</span>
+                        </div>
                     </div>
-                    <div class="signal-card signal-card-bottom">
-                        <span class="mono">stack</span>
-                        <strong>C# / .NET / Angular</strong>
+                    <div class="capability-item">
+                        <i class="fa-solid fa-diagram-project"></i>
+                        <div>
+                            <strong>Clean Architecture</strong>
+                            <span>Maintainable, testable solutions.</span>
+                        </div>
+                    </div>
+                    <div class="capability-item">
+                        <i class="fa-solid fa-code"></i>
+                        <div>
+                            <strong>API Design</strong>
+                            <span>REST APIs with strong contracts.</span>
+                        </div>
+                    </div>
+                    <div class="capability-item">
+                        <i class="fa-solid fa-gauge-high"></i>
+                        <div>
+                            <strong>Performance</strong>
+                            <span>Backend services built to scale.</span>
+                        </div>
                     </div>
                 </div>
             </section>
@@ -105,7 +139,7 @@
                     </article>
                     <article class="glass-card">
                         <h3>Collaboration</h3>
-                        <p>My background in education shows up in how I work: clear communication, patient problem-solving, and a habit of making complexity understandable.</p>
+                        <p>My background in education shows up in how I work: clear communication, patient problem-solving, continuous learning, and a habit of making complexity understandable.</p>
                     </article>
                     <article class="glass-card">
                         <h3>Strengths</h3>
@@ -130,7 +164,7 @@
                             <ul>
                                 <li>Modernizing a legacy payment platform through modular provider-based architecture.</li>
                                 <li>Built PSP integration work in C#/.NET, including OAuth2 authentication and secure token management.</li>
-                                <li>Refactored tightly coupled payment flows into decoupled provider abstractions for multiple PSPs.</li>
+                                <li>Refactored tightly coupled payment flows into decoupled provider abstractions for multiple PSPs, including Viva Payments and Windcave.</li>
                                 <li>Added integration, flow, and validation tests with xUnit, fake handlers, smoke tests, and Postman.</li>
                             </ul>
                             <div class="tag-row">
@@ -241,12 +275,37 @@
                     <h2>Grouped by how the work actually gets built.</h2>
                 </div>
                 <div class="skills-grid">
-                    <article class="skill-card"><i class="fa-solid fa-server"></i><h3>Backend</h3><p>C#, .NET, ASP.NET Core, REST APIs, OAuth2, JWT</p></article>
+                    <article class="skill-card"><i class="fa-solid fa-server"></i><h3>Backend</h3><p>C#, .NET, ASP.NET Core, REST APIs, OAuth2, JWT, ASP.NET Identity</p></article>
                     <article class="skill-card"><i class="fa-solid fa-window-maximize"></i><h3>Frontend</h3><p>Angular, TypeScript, JavaScript, HTML, CSS</p></article>
-                    <article class="skill-card"><i class="fa-solid fa-database"></i><h3>Database</h3><p>SQL Server, PostgreSQL, Entity Framework Core, migrations</p></article>
+                    <article class="skill-card"><i class="fa-solid fa-database"></i><h3>Database</h3><p>SQL Server, PostgreSQL, Entity Framework Core, EF Core Migrations</p></article>
                     <article class="skill-card"><i class="fa-solid fa-vial-circle-check"></i><h3>Testing</h3><p>xUnit, integration testing, smoke tests, fake handlers, Postman</p></article>
                     <article class="skill-card"><i class="fa-solid fa-cloud-arrow-up"></i><h3>DevOps</h3><p>Git, GitHub Actions, Docker fundamentals, deployment-minded workflows</p></article>
-                    <article class="skill-card"><i class="fa-solid fa-screwdriver-wrench"></i><h3>Tools</h3><p>Swagger/OpenAPI, AutoMapper, Visual Studio, VS Code, agile collaboration</p></article>
+                    <article class="skill-card"><i class="fa-solid fa-screwdriver-wrench"></i><h3>Architecture & Tools</h3><p>Clean Architecture, SOLID Principles, Dependency Injection, Repository Pattern, Swagger/OpenAPI, AutoMapper</p></article>
+                </div>
+            </section>
+
+            <section id="education" class="portfolio-section reveal">
+                <div class="section-heading">
+                    <p class="eyebrow">Education</p>
+                    <h2>Formal training and focused technical coursework.</h2>
+                </div>
+                <div class="education-grid">
+                    <article class="education-card">
+                        <span class="education-year">2023 - 2025</span>
+                        <h3>System Development .NET</h3>
+                        <p>Campus Varberg</p>
+                    </article>
+                    <article class="education-card">
+                        <span class="education-year">2016 - 2020</span>
+                        <h3>Pedagogical Degree, Year 4-6</h3>
+                        <p>Uppsala University</p>
+                    </article>
+                    <article class="education-card">
+                        <span class="education-year">2024</span>
+                        <h3>Additional IT Coursework</h3>
+                        <p>Introduction to Python - Högskolan i Gävle</p>
+                        <p>Cybersecurity - Linköpings Universitet</p>
+                    </article>
                 </div>
             </section>
 

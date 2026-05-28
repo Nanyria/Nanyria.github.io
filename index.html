@@ -3,339 +3,268 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Nathalee Wilund | Full-Stack Developer</title>
+    <title>Nathalee Wilund | Backend / Full-Stack Developer</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@500;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="CSS/resume.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <script src="JavaScript/resume.js"></script>
+    <script src="JavaScript/resume.js" defer></script>
 </head>
 <body>
-    <div class="resume-container">
-        <!-- Main Layout Container -->
-        <div class="resume-layout">
-            <!-- Left Sidebar -->
-            <aside class="resume-sidebar">
-                <!-- Top Section with Contact and Picture -->
-                <div class="sidebar-top">
-                    <div class="contact-section">
-                        <div class="contact-header">
-                            <h1 class="resume-name inter-regular">Nathalee Wilund</h1>
-                            <p class="resume-title">Full-Stack Developer</p>
-                        </div>
-                        <div class="resume-contact">
-                            <div class="contact-section-header">
-                                <h3 class="contact-title">
-                                    <i class="fas fa-address-card"></i>
-                                    Contact Information
-                                </h3>
-                            </div>
-                            <div class="social-links">
-                                <span>
-                                    <a href="https://www.linkedin.com/in/nathalee-wilund-048bab143" target="_blank"><i class="fab fa-linkedin"></i></a>
-                                </span>
-                                <span>
-                                    <a href="https://github.com/Nanyria" target="_blank"><i class="fa-brands fa-square-github"></i></a>
-                                </span>
-                            </div>
-                            <div class="contact-info">
-                                <span>
-                                    <i class="fas fa-envelope"></i> nathaleewi@hotmail.com
-                                </span>
-                                <span>
-                                    <i class="fas fa-phone"></i> (+46) 727032703
-                                </span>
-                            </div>
+    <div class="cursor-glow" aria-hidden="true"></div>
+    <div class="site-shell">
+        <header class="site-header">
+            <a class="brand" href="#home" aria-label="Nathalee Wilund home">
+                <span class="brand-mark">NW</span>
+                <span>Nathalee Wilund</span>
+            </a>
+            <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="site-nav" aria-label="Toggle navigation">
+                <i class="fa-solid fa-bars"></i>
+            </button>
+            <nav id="site-nav" class="site-nav" aria-label="Main navigation">
+                <a href="#about">About</a>
+                <a href="#experience">Experience</a>
+                <a href="#projects">Projects</a>
+                <a href="#skills">Skills</a>
+                <a href="#contact">Contact</a>
+            </nav>
+        </header>
 
-                        </div>
-
+        <main>
+            <section id="home" class="hero section-panel reveal">
+                <div class="hero-copy">
+                    <p class="eyebrow">Modern Backend Engineer</p>
+                    <h1>Nathalee Wilund</h1>
+                    <h2>Backend / Full-Stack Developer</h2>
+                    <p class="hero-intro">
+                        Building scalable payment systems, clean architectures, and modern backend experiences with .NET,
+                        REST APIs, OAuth2, and pragmatic full-stack delivery.
+                    </p>
+                    <div class="hero-actions" aria-label="Primary actions">
+                        <a class="button button-primary" href="#projects">
+                            <i class="fa-solid fa-layer-group"></i>
+                            View Projects
+                        </a>
+                        <a class="button button-secondary" href="mailto:nathaleewi@hotmail.com">
+                            <i class="fa-solid fa-paper-plane"></i>
+                            Contact Me
+                        </a>
+                        <button class="button button-ghost" type="button" onclick="window.print()">
+                            <i class="fa-solid fa-file-arrow-down"></i>
+                            Download CV
+                        </button>
                     </div>
-                    <div class="picture-section">
-                     <img src="../images/ProfilePicture.svg" alt="Profile Picture" class="resume-picture">
+                    <div class="social-row" aria-label="Social links">
+                        <a href="https://www.linkedin.com/in/nathalee-wilund-048bab143" target="_blank" rel="noreferrer" aria-label="LinkedIn">
+                            <i class="fa-brands fa-linkedin"></i>
+                        </a>
+                        <a href="https://github.com/Nanyria" target="_blank" rel="noreferrer" aria-label="GitHub">
+                            <i class="fa-brands fa-square-github"></i>
+                        </a>
+                        <a href="mailto:nathaleewi@hotmail.com" aria-label="Email">
+                            <i class="fa-solid fa-envelope"></i>
+                        </a>
                     </div>
-                </div>
-                
-                <!-- Sidebar Content Area -->
-                <div class="sidebar-content-area">
-                    <!-- Professional Summary Content -->
-                    <div id="summary-content" class="sidebar-section-content active">
-                        <section class="resume-section">
-                            <div class="section-content">
-                                <ul class="summary-list">
-                                    <li>
-                                        Backend developer with experience in .NET/C# payment systems,
-                                        PSP integrations, and modular architecture.
-                                    </li>
-
-                                    <li>
-                                        Passionate about clean architecture, maintainable backend systems,
-                                        and continuous learning.
-                                    </li>
-
-                                    <li>
-                                        Experience working with REST APIs, OAuth2 authentication,
-                                        Entity Framework Core, and Angular.
-                                    </li>
-
-                                    <li>
-                                        Strong communication and collaboration skills supported by
-                                        a background in education.
-                                    </li>
-                                </ul>
-                            </div>
-                        </section>
+                    <div class="expertise-pills" aria-label="Core expertise">
+                        <span>Payment Systems</span>
+                        <span>Clean Architecture</span>
+                        <span>REST APIs</span>
+                        <span>OAuth2</span>
+                        <span>.NET</span>
+                        <span>Integration Testing</span>
                     </div>
                 </div>
-            </aside>
 
-            <!-- Right Content Area -->
-            <main class="resume-main">
-                <!-- Section Navigation Buttons -->
-                <nav class="section-nav">
-                    <button class="nav-button" onclick="showSection('experience')"><i class="fas fa-briefcase"></i> Work Experience</button>
-                    <!-- <button class="nav-button active" onclick="showSection('about')"><i class="fas fa-user"></i> About</button> -->
-                    <button class="nav-button" onclick="showSection('education')"><i class="fas fa-graduation-cap"></i> Education</button>
-                    <button class="nav-button" onclick="showSection('skills')"><i class="fas fa-code"></i> Technical Skills</button>
-                    <button class="nav-button" onclick="showSection('projects')"><i class="fas fa-project-diagram"></i> Projects</button>
-                    <!-- <button class="nav-button print-button" onclick="printResume()"><i class="fas fa-print"></i> Print Resume</button> -->
-                </nav>
-
-                <!-- Dynamic Content Area -->
-                <div class="content-area">
-                    <!-- Experience Content -->
-
-
-
-                    <div id="experience-content" class="section-content active">
-                        <div class="experience-item">
-                            <div class="job-layout">
-                                <div class="left-sidebar">
-                                    <span class="job-company">Convene Mobility</span>
-                                    <span class="job-date">2026 - Present</span>
-                                </div>
-                                <div class="job-content">
-                                    <h3 class="job-title">Backend Developer (.NET / Payments)</h3>
-                                    <ul class="job-responsibilities">
-                                        <li>Part of a backend team modernizing a legacy payment platform and implementing a new PSP integration (Viva Payments) using a modular, provider-based architecture aligned with clean architecture principles.</li>
-                                        <li>Developed PSP integrations in C#/.NET, including OAuth2 authentication and secure token lifecycle management.</li>
-                                        <li>Refactored tightly coupled payment flows into decoupled provider abstractions supporting multiple PSPs, including Viva and Windcave.</li>
-                                        <li>Built integration, flow, and validation tests using xUnit, fake handlers, smoke tests, and Postman.</li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="experience-item">
-                            <div class="job-layout">
-                                <div class="left-sidebar">
-                                    <span class="job-company">Aire ENERGY</span>
-                                    <span class="job-date">2024 - 2025</span>
-                                </div>
-                                <div class="job-content">
-                                    <h3 class="job-title">Software Developer Intern</h3>
-                                    <ul class="job-responsibilities">
-                                        <li>Developed backend functionality in C#/.NET and frontend features in Angular.</li>
-                                        <li>Worked with REST APIs and modular application structure in a collaborative development environment.</li>
-                                        <li>Gained hands-on experience with full-stack workflows and agile development practices.</li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
-
-                        <!-- <div class="experience-item">
-                            <div class="job-layout">
-                                <div class="left-sidebar">
-                                    <span class="job-company">Forex</span>
-                                    <span class="job-date">2023 - 2024</span>
-                                </div>
-                                <div class="job-content">
-                                    <h3 class="job-title">Sales Person</h3>
-                                    <ul class="job-responsibilities">
-                                        <li>Provided in-store currency exchange services</li>
-                                        <li>Handled customer transactions and inquiries</li>
-                                        <li>Maintained accurate financial records and compliance</li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </div> -->
-
-                        <div class="experience-item">
-                            <div class="job-layout">
-                                <div class="left-sidebar">
-                                    <span class="job-company">Multiple Schools</span>
-                                    <span class="job-date">2020 - 2023</span>
-                                </div>
-                                <div class="job-content">
-                                    <h3 class="job-title">Educator – Multiple Schools</h3>
-                                    <ul class="job-responsibilities">
-                                        <li>Planned and delivered structured learning experiences for students in grades 4–6 across multiple subjects.</li>
-                                        <li>Developed strong communication, adaptability, and problem-solving skills through work with diverse student needs.</li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
-
-                        <!-- <div class="experience-item">
-                            <div class="job-layout">
-                                <div class="left-sidebar">
-                                    <span class="job-company">Swedish Social Insurance Agency</span>
-                                    <span class="job-date">2014 - 2020</span>
-                                </div>
-                                <div class="job-content">
-                                    <h3 class="job-title">Case Manager</h3>
-                                    <ul class="job-responsibilities">
-                                        <li>Managed sickness benefit cases and assessments</li>
-                                        <li>Provided guidance and support to clients</li>
-                                        <li>Maintained detailed case documentation and compliance with regulations</li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </div> -->
+                <div class="hero-visual" aria-label="Portrait and engineering highlights">
+                    <div class="portrait-frame">
+                        <span class="ambient ambient-one"></span>
+                        <span class="ambient ambient-two"></span>
+                        <img src="images/ProfilePicture.svg" alt="Portrait of Nathalee Wilund">
                     </div>
-
-                    <!-- About Content -->
-                    <!-- <div id="about-content" class="section-content">
-                        <section class="about-layout">
-
-                                <p>I'm a recent graduate eager to dive into the world of programming with the knowledge and passion I've built over the past two years of study.</p>
-                                <p>What excites me most about programming is the endless opportunity to learn. There’s always something new to explore, and I thrive on finding solutions and growing my skills.</p>
-
-                                <p>With a background as an educator and a creative mindset, I approach programming as both a puzzle and an art form. My goal is to design functional, user-centered solutions that balance technical precision with thoughtful design.</p>      
-                                <p>I enjoy both backend and frontend development, as reflected in projects like NyriaNest—a thesis project that I continue to develop and expand in my free time.</p>
-                                <p>I may be new to the industry, but I bring proactivity, resourcefulness, and a love of learning. I adapt quickly, stay up to date with new technologies, and am always ready to pick up a new programming language or tool when needed.</p>
-                                <p>For me, programming isn't just a career, it's a hobby.</p>
-
-                        </section>
-                    </div> -->
-                    <!-- Education Content -->
-                    <div id="education-content" class="section-content">
-                        <div class="education-item">
-                            <h3 class="degree">System Development .NET</h3>
-                            <span class="school">Campus Varberg</span>
-                            <span class="graduation-date">2023 - 2025</span>
-                        </div>
-
-                        <div class="education-item">
-                            <h3 class="degree">Pedagogical Degree, Year 4-6</h3>
-                            <span class="school">Uppsala University</span>
-                            <span class="graduation-date">2016 - 2020</span>
-                        </div>
-                    </br>
-                        <div class="education-item">
-                            <h3 class="degree">Additional Coursework in IT</h3>
-                             <h4>Introduction to Python</h4>
-                            <span class="school">Högskolan i Gävle</span>
-                            <span class="graduation-date">2024</span>
-                        </div>
-
-                            <div class="education-item">
-                             <h4>Cybersecurity</h4>
-                            <span class="school">Linköpings Universitet</span>
-                            <span class="graduation-date">2024</span>
-                       </div>
+                    <div class="signal-card signal-card-top">
+                        <span class="mono">current_focus</span>
+                        <strong>Payments + APIs</strong>
                     </div>
-
-                    <!-- Skills Content -->
-                    <div id="skills-content" class="section-content">
-                        <div class="skills-grid">
-                            <div class="skill-category">
-                                <h4>Programming Languages</h4>
-                                <div class="skill-tags">
-                                    <span class="skill-tag">C#</span>
-                                    <span class="skill-tag">TypeScript</span>
-                                    <span class="skill-tag">JavaScript</span>
-                                    <span class="skill-tag">SQL</span>
-                                </div>
-                            </div>
-                            <div class="skill-category">
-                                <h4>Web Technologies</h4>
-                                <div class="skill-tags">
-                                    <span class="skill-tag">HTML/CSS</span>
-                                    <span class="skill-tag">Angular</span>
-                                </div>
-                            </div>
-                            <div class="skill-category">
-                                <h4>Backend & APIs</h4>
-                                <div class="skill-tags">
-                                    <span class="skill-tag">ASP.NET Core</span>
-                                    <span class="skill-tag">REST APIs</span>
-                                    <span class="skill-tag">ASP.NET Identity</span>
-                                    <span class="skill-tag">JWT Authentication</span>
-                                    <span class="skill-tag">Swagger/OpenAPI</span>
-                                    <span class="skill-tag">OAuth2</span>
-                                    <span class="skill-tag">AutoMapper</span>
-                                </div>
-                            </div>
-                            <div class="skill-category">
-                                <h4>Database & Tools</h4>
-                                <div class="skill-tags">
-                                    <span class="skill-tag">SQL Server</span>
-                                    <span class="skill-tag">Entity Framework Core</span>
-                                    <span class="skill-tag">Entity Framework Migrations</span>
-                                    <span class="skill-tag">Git</span>
-                                    <span class="skill-tag">Postman</span>
-                                    <span class="skill-tag">xUnit</span>
-                                </div>
-                            </div>
-                            <div class="skill-category">
-                                <h4>Architecture</h4>
-                                <div class="skill-tags">
-                                    <span class="skill-tag">Clean Architecture</span>
-                                    <span class="skill-tag">SOLID Principles</span>
-                                    <span class="skill-tag">Dependency Injection</span>
-                                    <span class="skill-tag">Repository Pattern</span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Projects Content -->
-                    <div id="projects-content" class="section-content">
-                        <div class="project-item">
-                            <div class="job-layout">
-                                <div class="job-content">
-                                    <h3 class="project-title">PlsEnergyDirector — Revenue Chart</h3>
-                                    <span class="project-tech">Angular, TypeScript, Highcharts</span>
-                                    <p class="project-description">Implemented interactive revenue charts in the Angular frontend using Highcharts to visualise generated revenues. Features include tooltips, zoom, export, and efficient rendering for large datasets.</p>
-                                </div>
-                                <div class="right-sidebar">
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="project-item">
-                            <div class="job-layout">
-                                <div class="job-content">
-                                    <h3 class="project-title">NanyriaNest - Library Management System</h3>
-                                    <span class="project-tech">C#, ASP.NET Core, Entity Framework, Angular, SQL Server, JWT Authentication</span>
-                                    <p class="project-description">Comprehensive library management system built with .NET 8.0 backend and Angular CLI v17.3.9 frontend. Features include user authentication with JWT, Entity Framework Core with migrations, repository pattern implementation, AutoMapper for object mapping, and Swagger/OpenAPI documentation.</p>
-                                </div>
-                                <div class="right-sidebar">
-                                    <a href="https://github.com/Nanyria/NyriaNest" target="_blank" class="github-link">
-                                        <i class="fab fa-github"></i> View on GitHub
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="project-item">
-                            <div class="job-layout">
-                                <div class="job-content">
-                                    <h3 class="project-title">Interactive Resume Webpage</h3>
-                                    <span class="project-tech">HTML, CSS, JavaScript, Font Awesome</span>
-                                    <p class="project-description">Responsive single-page application featuring dynamic content switching, custom animations, and professional design. Built with modern CSS techniques including flexbox layouts, gradient backgrounds, hover effects, and smooth transitions. Features tabbed navigation, print-optimized styling, and mobile-responsive design with a sophisticated color scheme and typography.</p>
-                                </div>
-                                <div class="right-sidebar">
-                                    <a href="https://github.com/Nanyria/Nanyria.github.io" target="_blank" class="github-link">
-                                        <i class="fab fa-github"></i> View on GitHub
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
+                    <div class="signal-card signal-card-bottom">
+                        <span class="mono">stack</span>
+                        <strong>C# / .NET / Angular</strong>
                     </div>
                 </div>
-            </main>
-        
-        </div> <!-- Close resume-layout -->
+            </section>
+
+            <section id="about" class="portfolio-section reveal">
+                <div class="section-heading">
+                    <p class="eyebrow">About</p>
+                    <h2>Clear systems. Calm delivery. Strong backend instincts.</h2>
+                </div>
+                <div class="about-grid">
+                    <article class="glass-card">
+                        <h3>Engineering Philosophy</h3>
+                        <p>I like systems that are easy to reason about: explicit boundaries, clean flows, useful tests, and code that lets the next person move faster.</p>
+                    </article>
+                    <article class="glass-card">
+                        <h3>Collaboration</h3>
+                        <p>My background in education shows up in how I work: clear communication, patient problem-solving, and a habit of making complexity understandable.</p>
+                    </article>
+                    <article class="glass-card">
+                        <h3>Strengths</h3>
+                        <p>Backend payment integrations, REST APIs, OAuth2 token lifecycles, Entity Framework Core, Angular features, and practical testing workflows.</p>
+                    </article>
+                </div>
+            </section>
+
+            <section id="experience" class="portfolio-section reveal">
+                <div class="section-heading">
+                    <p class="eyebrow">Experience</p>
+                    <h2>Production-shaped backend work, presented for scanning.</h2>
+                </div>
+                <div class="timeline">
+                    <article class="timeline-card">
+                        <div class="timeline-meta">
+                            <span>2026 - Present</span>
+                            <strong>Convene Mobility</strong>
+                        </div>
+                        <div class="timeline-content">
+                            <h3>Backend Developer (.NET / Payments)</h3>
+                            <ul>
+                                <li>Modernizing a legacy payment platform through modular provider-based architecture.</li>
+                                <li>Built PSP integration work in C#/.NET, including OAuth2 authentication and secure token management.</li>
+                                <li>Refactored tightly coupled payment flows into decoupled provider abstractions for multiple PSPs.</li>
+                                <li>Added integration, flow, and validation tests with xUnit, fake handlers, smoke tests, and Postman.</li>
+                            </ul>
+                            <div class="tag-row">
+                                <span>C#</span><span>.NET</span><span>OAuth2</span><span>REST APIs</span><span>xUnit</span><span>Postman</span>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="timeline-card">
+                        <div class="timeline-meta">
+                            <span>2024 - 2025</span>
+                            <strong>Aire ENERGY</strong>
+                        </div>
+                        <div class="timeline-content">
+                            <h3>Software Developer Intern</h3>
+                            <ul>
+                                <li>Developed backend functionality in C#/.NET and frontend features in Angular.</li>
+                                <li>Worked with REST APIs and modular application structure in a collaborative environment.</li>
+                                <li>Built practical full-stack experience across implementation, review, and agile workflows.</li>
+                            </ul>
+                            <div class="tag-row">
+                                <span>C#</span><span>.NET</span><span>Angular</span><span>TypeScript</span><span>REST APIs</span>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="timeline-card">
+                        <div class="timeline-meta">
+                            <span>2020 - 2023</span>
+                            <strong>Multiple Schools</strong>
+                        </div>
+                        <div class="timeline-content">
+                            <h3>Educator</h3>
+                            <ul>
+                                <li>Planned and delivered structured learning experiences across multiple subjects.</li>
+                                <li>Built strong communication, adaptability, and problem-solving skills with diverse student needs.</li>
+                            </ul>
+                            <div class="tag-row">
+                                <span>Communication</span><span>Structure</span><span>Problem Solving</span>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+            </section>
+
+            <section id="projects" class="portfolio-section reveal">
+                <div class="section-heading">
+                    <p class="eyebrow">Projects</p>
+                    <h2>Featured technical work with architecture in view.</h2>
+                </div>
+                <div class="project-grid">
+                    <article class="project-card project-featured">
+                        <div class="project-visual">
+                            <div class="mock-window">
+                                <span></span><span></span><span></span>
+                            </div>
+                            <div class="mock-chart">
+                                <i style="height: 42%"></i>
+                                <i style="height: 68%"></i>
+                                <i style="height: 54%"></i>
+                                <i style="height: 86%"></i>
+                                <i style="height: 74%"></i>
+                            </div>
+                        </div>
+                        <div class="project-body">
+                            <p class="mono">featured_project</p>
+                            <h3>PlsEnergyDirector - Revenue Chart</h3>
+                            <p>Interactive Angular revenue visualization with Highcharts, export support, zoom, tooltips, and efficient rendering for larger datasets.</p>
+                            <div class="tag-row">
+                                <span>Angular</span><span>TypeScript</span><span>Highcharts</span><span>Data UI</span>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="project-card">
+                        <div class="project-visual compact">
+                            <i class="fa-solid fa-book-open-reader"></i>
+                        </div>
+                        <div class="project-body">
+                            <h3>NanyriaNest - Library Management System</h3>
+                            <p>.NET 8 and Angular application with JWT auth, EF Core migrations, repository pattern, AutoMapper, and Swagger/OpenAPI documentation.</p>
+                            <div class="tag-row">
+                                <span>ASP.NET Core</span><span>Angular</span><span>SQL Server</span><span>JWT</span>
+                            </div>
+                            <a href="https://github.com/Nanyria/NyriaNest" target="_blank" rel="noreferrer">View GitHub <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                        </div>
+                    </article>
+
+                    <article class="project-card">
+                        <div class="project-visual compact">
+                            <i class="fa-solid fa-code-branch"></i>
+                        </div>
+                        <div class="project-body">
+                            <h3>Modern Engineer Portfolio</h3>
+                            <p>Dark premium portfolio system with responsive layout, glass navigation, scroll states, subtle motion, and a technical SaaS-inspired identity.</p>
+                            <div class="tag-row">
+                                <span>HTML</span><span>CSS</span><span>JavaScript</span><span>Responsive UI</span>
+                            </div>
+                            <a href="https://github.com/Nanyria/Nanyria.github.io" target="_blank" rel="noreferrer">View GitHub <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                        </div>
+                    </article>
+                </div>
+            </section>
+
+            <section id="skills" class="portfolio-section reveal">
+                <div class="section-heading">
+                    <p class="eyebrow">Technical Skills</p>
+                    <h2>Grouped by how the work actually gets built.</h2>
+                </div>
+                <div class="skills-grid">
+                    <article class="skill-card"><i class="fa-solid fa-server"></i><h3>Backend</h3><p>C#, .NET, ASP.NET Core, REST APIs, OAuth2, JWT</p></article>
+                    <article class="skill-card"><i class="fa-solid fa-window-maximize"></i><h3>Frontend</h3><p>Angular, TypeScript, JavaScript, HTML, CSS</p></article>
+                    <article class="skill-card"><i class="fa-solid fa-database"></i><h3>Database</h3><p>SQL Server, PostgreSQL, Entity Framework Core, migrations</p></article>
+                    <article class="skill-card"><i class="fa-solid fa-vial-circle-check"></i><h3>Testing</h3><p>xUnit, integration testing, smoke tests, fake handlers, Postman</p></article>
+                    <article class="skill-card"><i class="fa-solid fa-cloud-arrow-up"></i><h3>DevOps</h3><p>Git, GitHub Actions, Docker fundamentals, deployment-minded workflows</p></article>
+                    <article class="skill-card"><i class="fa-solid fa-screwdriver-wrench"></i><h3>Tools</h3><p>Swagger/OpenAPI, AutoMapper, Visual Studio, VS Code, agile collaboration</p></article>
+                </div>
+            </section>
+
+            <section id="contact" class="portfolio-section contact-section reveal">
+                <div class="contact-panel">
+                    <div>
+                        <p class="eyebrow">Contact</p>
+                        <h2>Open to backend and full-stack opportunities.</h2>
+                        <p>If you are building payment systems, internal tools, API-heavy products, or clean .NET services, I would be happy to connect.</p>
+                    </div>
+                    <div class="contact-actions">
+                        <a class="button button-primary" href="mailto:nathaleewi@hotmail.com"><i class="fa-solid fa-envelope"></i>Email</a>
+                        <a class="button button-secondary" href="https://www.linkedin.com/in/nathalee-wilund-048bab143" target="_blank" rel="noreferrer"><i class="fa-brands fa-linkedin"></i>LinkedIn</a>
+                        <a class="button button-secondary" href="https://github.com/Nanyria" target="_blank" rel="noreferrer"><i class="fa-brands fa-github"></i>GitHub</a>
+                    </div>
+                </div>
+            </section>
+        </main>
     </div>
 </body>
 </html>

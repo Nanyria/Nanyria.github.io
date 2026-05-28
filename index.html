@@ -213,7 +213,7 @@
             <section id="projects" class="portfolio-section reveal">
                 <div class="section-heading">
                     <p class="eyebrow">Projects</p>
-                    <h2>Featured technical work with architecture in view.</h2>
+                    <h2>Backend-heavy projects with real integration and architecture depth.</h2>
                 </div>
                 <div class="project-grid">
                     <article class="project-card project-featured">
@@ -222,19 +222,59 @@
                                 <span></span><span></span><span></span>
                             </div>
                             <div class="mock-chart">
-                                <i style="height: 42%"></i>
-                                <i style="height: 68%"></i>
-                                <i style="height: 54%"></i>
-                                <i style="height: 86%"></i>
-                                <i style="height: 74%"></i>
+                                <div class="payment-flow">
+                                    <span>OAuth2</span>
+                                    <i></i>
+                                    <span>Token Cache</span>
+                                    <i></i>
+                                    <span>Viva Provider</span>
+                                    <i></i>
+                                    <span>Payment Flow</span>
+                                </div>
                             </div>
                         </div>
                         <div class="project-body">
-                            <p class="mono">featured_project</p>
-                            <h3>PlsEnergyDirector - Revenue Chart</h3>
-                            <p>Interactive Angular revenue visualization with Highcharts, export support, zoom, tooltips, and efficient rendering for larger datasets.</p>
+                            <h3>Viva Payments PSP Integration</h3>
+                            <p>Implemented a production-grade Viva Payments provider integration in a .NET backend, including OAuth2 authentication, token lifecycle management, automatic refresh, and end-to-end flow validation.</p>
+                            <ul class="project-highlights">
+                                <li>Implemented OAuth2 client_credentials flow with request construction, credential encoding, and JSON response mapping.</li>
+                                <li>Designed secure token handling with cached access tokens, expiry validation, and automatic refresh.</li>
+                                <li>Built HTTP integration tests using fake message handlers and xUnit flow tests.</li>
+                                <li>Debugged and validated external API behavior using Postman and request inspection.</li>
+                            </ul>
                             <div class="tag-row">
-                                <span>Angular</span><span>TypeScript</span><span>Highcharts</span><span>Data UI</span>
+                                <span>C#</span><span>.NET</span><span>OAuth2</span><span>HttpClient</span><span>xUnit</span><span>Postman</span>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="project-card">
+                        <div class="project-visual compact">
+                            <i class="fa-solid fa-diagram-project"></i>
+                        </div>
+                        <div class="project-body">
+                            <h3>Multi-Provider Payment Architecture</h3>
+                            <p>Designed and implemented a modular payment architecture using provider abstractions, enabling flexible runtime selection and easier onboarding of new PSPs.</p>
+                            <ul class="project-highlights">
+                                <li>Refactored payment flows into provider-based abstractions supporting Viva Payments, Windcave, Adyen, and Demo providers.</li>
+                                <li>Kept shared business interfaces provider-agnostic while isolating PSP-specific logic in provider layers.</li>
+                                <li>Applied clean architecture principles across orchestration, protocol handling, and integrations.</li>
+                            </ul>
+                            <div class="tag-row">
+                                <span>C#</span><span>.NET</span><span>Clean Architecture</span><span>Provider Pattern</span><span>Dependency Injection</span>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="project-card">
+                        <div class="project-visual compact">
+                            <i class="fa-solid fa-chart-line"></i>
+                        </div>
+                        <div class="project-body">
+                            <h3>Aire Energy - Revenue Chart</h3>
+                            <p>Implemented interactive revenue visualizations in an Angular frontend using Highcharts, making generated revenue data easier to inspect, compare, and export.</p>
+                            <div class="tag-row">
+                                <span>Angular</span><span>TypeScript</span><span>Highcharts</span><span>Data Visualization</span>
                             </div>
                         </div>
                     </article>
@@ -245,9 +285,9 @@
                         </div>
                         <div class="project-body">
                             <h3>NanyriaNest - Library Management System</h3>
-                            <p>.NET 8 and Angular application with JWT auth, EF Core migrations, repository pattern, AutoMapper, and Swagger/OpenAPI documentation.</p>
+                            <p>Full-stack library management system built with .NET 8 and Angular, including JWT authentication, EF Core migrations, repository pattern, AutoMapper, and Swagger/OpenAPI documentation.</p>
                             <div class="tag-row">
-                                <span>ASP.NET Core</span><span>Angular</span><span>SQL Server</span><span>JWT</span>
+                                <span>ASP.NET Core</span><span>Angular</span><span>SQL Server</span><span>JWT</span><span>EF Core</span>
                             </div>
                             <a href="https://github.com/Nanyria/NyriaNest" target="_blank" rel="noreferrer">View GitHub <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
                         </div>
@@ -259,7 +299,7 @@
                         </div>
                         <div class="project-body">
                             <h3>Modern Engineer Portfolio</h3>
-                            <p>Dark premium portfolio system with responsive layout, glass navigation, scroll states, subtle motion, and a technical SaaS-inspired identity.</p>
+                            <p>Premium dark portfolio interface with responsive layout, glass navigation, scroll states, subtle motion, and a technical SaaS-inspired visual identity.</p>
                             <div class="tag-row">
                                 <span>HTML</span><span>CSS</span><span>JavaScript</span><span>Responsive UI</span>
                             </div>
@@ -272,15 +312,76 @@
             <section id="skills" class="portfolio-section reveal">
                 <div class="section-heading">
                     <p class="eyebrow">Technical Skills</p>
-                    <h2>Grouped by how the work actually gets built.</h2>
+                    <h2>Backend foundations with full-stack range.</h2>
                 </div>
                 <div class="skills-grid">
-                    <article class="skill-card"><i class="fa-solid fa-server"></i><h3>Backend</h3><p>C#, .NET, ASP.NET Core, REST APIs, OAuth2, JWT, ASP.NET Identity</p></article>
-                    <article class="skill-card"><i class="fa-solid fa-window-maximize"></i><h3>Frontend</h3><p>Angular, TypeScript, JavaScript, HTML, CSS</p></article>
-                    <article class="skill-card"><i class="fa-solid fa-database"></i><h3>Database</h3><p>SQL Server, PostgreSQL, Entity Framework Core, EF Core Migrations</p></article>
-                    <article class="skill-card"><i class="fa-solid fa-vial-circle-check"></i><h3>Testing</h3><p>xUnit, integration testing, smoke tests, fake handlers, Postman</p></article>
-                    <article class="skill-card"><i class="fa-solid fa-cloud-arrow-up"></i><h3>DevOps</h3><p>Git, GitHub Actions, Docker fundamentals, deployment-minded workflows</p></article>
-                    <article class="skill-card"><i class="fa-solid fa-screwdriver-wrench"></i><h3>Architecture & Tools</h3><p>Clean Architecture, SOLID Principles, Dependency Injection, Repository Pattern, Swagger/OpenAPI, AutoMapper</p></article>
+                    <article class="skill-card">
+                        <i class="fa-solid fa-server"></i>
+                        <h3>Backend</h3>
+                        <div class="skill-tags">
+                            <span>C#</span>
+                            <span>.NET</span>
+                            <span>ASP.NET Core</span>
+                            <span>REST APIs</span>
+                            <span>OAuth2</span>
+                            <span>JWT</span>
+                            <span>ASP.NET Identity</span>
+                        </div>
+                    </article>
+                    <article class="skill-card">
+                        <i class="fa-solid fa-window-maximize"></i>
+                        <h3>Frontend</h3>
+                        <div class="skill-tags">
+                            <span>Angular</span>
+                            <span>TypeScript</span>
+                            <span>JavaScript</span>
+                            <span>HTML</span>
+                            <span>CSS</span>
+                        </div>
+                    </article>
+                    <article class="skill-card">
+                        <i class="fa-solid fa-database"></i>
+                        <h3>Database</h3>
+                        <div class="skill-tags">
+                            <span>SQL Server</span>
+                            <span>PostgreSQL</span>
+                            <span>Entity Framework Core</span>
+                            <span>EF Core Migrations</span>
+                        </div>
+                    </article>
+                    <article class="skill-card">
+                        <i class="fa-solid fa-vial-circle-check"></i>
+                        <h3>Testing</h3>
+                        <div class="skill-tags">
+                            <span>xUnit</span>
+                            <span>Integration Testing</span>
+                            <span>Smoke Tests</span>
+                            <span>Fake Handlers</span>
+                            <span>Postman</span>
+                        </div>
+                    </article>
+                    <article class="skill-card">
+                        <i class="fa-solid fa-cloud-arrow-up"></i>
+                        <h3>DevOps</h3>
+                        <div class="skill-tags">
+                            <span>Git</span>
+                            <span>GitHub Actions</span>
+                            <span>Docker Fundamentals</span>
+                            <span>Deployment Workflows</span>
+                        </div>
+                    </article>
+                    <article class="skill-card">
+                        <i class="fa-solid fa-screwdriver-wrench"></i>
+                        <h3>Architecture & Tools</h3>
+                        <div class="skill-tags">
+                            <span>Clean Architecture</span>
+                            <span>SOLID Principles</span>
+                            <span>Dependency Injection</span>
+                            <span>Repository Pattern</span>
+                            <span>Swagger/OpenAPI</span>
+                            <span>AutoMapper</span>
+                        </div>
+                    </article>
                 </div>
             </section>
 

@@ -207,7 +207,7 @@ p {
 .hero {
     position: relative;
     display: grid;
-    grid-template-columns: minmax(0, 0.9fr) minmax(180px, 0.34fr) minmax(460px, 0.95fr);
+    grid-template-columns: minmax(0, 0.95fr) minmax(180px, 0.34fr) minmax(410px, 0.82fr);
     gap: clamp(26px, 4vw, 48px);
     align-items: center;
     min-height: calc(100vh - 88px);
@@ -225,11 +225,11 @@ p {
     transform: translateX(-50%);
     pointer-events: none;
     background:
-        radial-gradient(circle at 74% 24%, rgba(249, 115, 22, 0.22), transparent 25%),
-        radial-gradient(circle at 68% 36%, rgba(124, 45, 18, 0.2), transparent 34%),
-        radial-gradient(circle at 18% 12%, rgba(249, 115, 22, 0.045), transparent 26%),
-        linear-gradient(to bottom, #030304 0%, rgba(3, 3, 4, 0.38) 34%, #030304 91%),
-        linear-gradient(90deg, rgba(0, 0, 0, 0.58), transparent 38%, rgba(0, 0, 0, 0.55));
+        radial-gradient(circle at 73% 30%, rgba(249, 115, 22, 0.34), transparent 22%),
+        radial-gradient(ellipse at 70% 44%, rgba(124, 45, 18, 0.26), transparent 36%),
+        radial-gradient(circle at 18% 12%, rgba(249, 115, 22, 0.07), transparent 26%),
+        linear-gradient(to bottom, #030304 0%, rgba(3, 3, 4, 0.18) 34%, #030304 91%),
+        linear-gradient(90deg, rgba(0, 0, 0, 0.72), transparent 34%, rgba(0, 0, 0, 0.78) 78%, #030304 100%);
     z-index: 0;
 }
 
@@ -413,13 +413,13 @@ h3 {
 
 .hero-visual {
     position: relative;
-    min-height: 610px;
+    min-height: 560px;
     z-index: 2;
     isolation: isolate;
 }
 
 .hero-visual::after {
-    content: "";
+    content: none;
     position: absolute;
     left: -12%;
     right: -18%;
@@ -437,9 +437,9 @@ h3 {
 
 .portrait-frame {
     position: relative;
-    width: min(680px, 120%);
-    min-height: 560px;
-    margin-left: -80px;
+    width: min(600px, 108%);
+    min-height: 520px;
+    margin-left: -42px;
     display: grid;
     align-items: end;
     justify-items: center;
@@ -455,29 +455,39 @@ h3 {
 .portrait-frame::before {
     content: "";
     position: absolute;
-    inset: -190px -280px -150px;
+    inset: -140px -205px -115px;
     border-radius: 999px;
     background:
-        radial-gradient(circle at 58% 34%, rgba(249, 115, 22, 0.62), transparent 28%),
-        radial-gradient(ellipse at 52% 52%, rgba(124, 45, 18, 0.42), transparent 50%),
-        radial-gradient(ellipse at 50% 92%, #030304 0%, transparent 62%);
-    filter: blur(115px);
+        radial-gradient(circle at 56% 31%, rgba(249, 115, 22, 0.58), transparent 24%),
+        radial-gradient(ellipse at 54% 48%, rgba(124, 45, 18, 0.42), transparent 43%),
+        radial-gradient(circle at 50% 42%, rgba(255, 237, 213, 0.06), transparent 30%),
+        radial-gradient(ellipse at 50% 90%, #030304 0%, transparent 60%);
+    filter: blur(104px);
     z-index: -1;
     pointer-events: none;
 }
 
 .portrait-frame::after {
-    content: "";
+    content: none;
     position: absolute;
-    left: -28%;
-    right: -28%;
+    left: -22%;
+    right: -22%;
+    top: -8%;
     bottom: -34px;
-    height: 62%;
+    height: auto;
     background:
+        linear-gradient(
+            to right,
+            transparent 0%,
+            transparent 68%,
+            rgba(3, 3, 4, 0.42) 86%,
+            #030304 100%
+        ),
         linear-gradient(
             to bottom,
             transparent 0%,
-            rgba(3, 3, 4, 0.65) 45%,
+            transparent 40%,
+            rgba(3, 3, 4, 0.66) 72%,
             #030304 100%
         );
     pointer-events: none;
@@ -487,29 +497,15 @@ h3 {
 .portrait-frame img {
     position: relative;
     z-index: 2;
-    width: min(620px, 118%);
-    max-height: 620px;
+    width: min(550px, 106%);
+    max-height: 570px;
     background: transparent;
     object-fit: contain;
-    transform: translateX(26px) translateY(10px);
+    transform: translateX(-12px) translateY(-8px);
     filter:
         drop-shadow(0 34px 70px rgba(0, 0, 0, 0.65))
         saturate(1.05)
         contrast(1.04);
-    -webkit-mask-image: radial-gradient(
-        ellipse 70% 82% at 52% 42%,
-        #000 0%,
-        #000 46%,
-        rgba(0, 0, 0, 0.72) 62%,
-        transparent 100%
-    );
-    mask-image: radial-gradient(
-        ellipse 70% 82% at 52% 42%,
-        #000 0%,
-        #000 46%,
-        rgba(0, 0, 0, 0.72) 62%,
-        transparent 100%
-    );
 }
 
 .ambient {
@@ -1182,13 +1178,13 @@ h3 {
 
     .hero-visual {
         grid-column: 2;
-        min-height: 500px;
+        min-height: 460px;
     }
 
     .portrait-frame {
         margin: auto;
-        min-height: 500px;
-        width: min(420px, 100%);
+        min-height: 460px;
+        width: min(380px, 100%);
     }
 
     .hero-capabilities {

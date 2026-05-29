@@ -1399,7 +1399,7 @@ h3 {
 
     .hero-visual {
         grid-column: auto;
-        min-height: 440px;
+        min-height: 360px;
     }
 
     .hero-insights {
@@ -1414,21 +1414,22 @@ h3 {
     .hero-capabilities {
         order: 4;
         grid-template-columns: 1fr;
-        padding: 22px;
+        gap: 18px;
+        padding: 20px;
     }
 
     .portrait-frame {
-        width: min(390px, 100%);
-        min-height: 430px;
+        width: min(340px, 100%);
+        min-height: 360px;
     }
 
     .portrait-frame img {
-        width: min(360px, 96%);
+        width: min(320px, 94%);
     }
 
     .signal-card {
         width: 100%;
-        padding: 13px;
+        padding: 12px;
     }
 
     .signal-card-top {
@@ -1456,22 +1457,83 @@ h3 {
         width: min(100% - 20px, var(--max-width));
     }
 
-    .hero-actions .button,
+    .site-header {
+        top: 8px;
+        min-height: 56px;
+        padding: 9px 10px;
+    }
+
+    .portfolio-section {
+        padding: 40px 0;
+    }
+
+    .brand-mark {
+        width: 34px;
+        height: 34px;
+    }
+
+    .hero h1 {
+        font-size: clamp(2.85rem, 15vw, 3.85rem);
+    }
+
+    .hero-intro {
+        margin-top: 20px;
+        font-size: 1rem;
+        line-height: 1.68;
+    }
+
+    .hero-actions .button {
+        flex: 1 1 calc(50% - 6px);
+    }
+
     .contact-actions .button {
         width: 100%;
     }
 
     .hero-visual {
-        min-height: 390px;
+        min-height: 310px;
     }
 
     .portrait-frame {
-        min-height: 390px;
+        width: min(300px, 100%);
+        min-height: 310px;
         padding-inline: 14px;
     }
 
-    .signal-card {
+    .portrait-frame img {
+        width: min(285px, 96%);
+    }
+
+    .hero-insights {
+        padding: 18px;
+    }
+
+    .signal-card-top {
         display: none;
+    }
+
+    .signal-card-bottom {
+        display: block;
+        padding: 0;
+    }
+
+    .stack-badges {
+        margin-top: 14px;
+    }
+
+    .stack-icon {
+        width: 30px;
+        height: 30px;
+    }
+
+    .capability-item {
+        grid-template-columns: 32px minmax(0, 1fr);
+        gap: 12px;
+    }
+
+    .capability-item i {
+        width: 32px;
+        height: 32px;
     }
 
     .glass-card,
@@ -1480,7 +1542,26 @@ h3 {
     .skill-card,
     .education-card,
     .contact-panel {
-        padding: 22px;
+        padding: 18px;
+    }
+
+    .project-case-card .project-body {
+        gap: 11px;
+    }
+
+    .project-meta {
+        font-size: 0.66rem;
+        letter-spacing: 0.1em;
+    }
+
+    #projects .project-case-card h3 {
+        font-size: 1.42rem;
+    }
+
+    #projects .project-case-card .project-summary,
+    .project-highlights li {
+        line-height: 1.55;
+        font-size: 0.86rem;
     }
 
     .project-visual {
@@ -1498,6 +1579,33 @@ h3 {
         top: 18px;
         max-width: calc(100% - 36px);
         line-height: 1.4;
+    }
+}
+
+@media (max-width: 420px) {
+    .hero-actions .button {
+        flex-basis: 100%;
+        width: 100%;
+    }
+
+    .contact-panel {
+        text-align: center;
+    }
+
+    .contact-actions {
+        justify-content: center;
+    }
+}
+
+@media (pointer: coarse) {
+    html,
+    button,
+    a {
+        cursor: auto;
+    }
+
+    .cursor-glow {
+        display: none;
     }
 }
 

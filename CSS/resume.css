@@ -1477,7 +1477,8 @@ h3 {
 
 @media (max-width: 520px) {
     .site-shell {
-        width: min(calc(100% - 20px), var(--max-width));
+        width: 100%;
+        max-width: calc(100vw - 20px);
         overflow-x: clip;
     }
 
@@ -1531,6 +1532,7 @@ h3 {
     }
 
     .hero {
+        width: 100%;
         gap: 24px;
         padding-bottom: 24px;
         isolation: isolate;
@@ -1558,12 +1560,12 @@ h3 {
     }
 
     .portrait-frame::before {
-        inset: -170px -56px -150px -100px;
+        inset: -170px -36px -150px -90px;
     }
 
     .portrait-frame img {
-        width: min(370px, 100%);
-        transform: translateX(12px) translateY(-148px);
+        width: min(360px, 100%);
+        transform: translateY(-148px);
     }
 
     .hero-insights {

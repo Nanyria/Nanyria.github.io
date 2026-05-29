@@ -51,10 +51,6 @@
                             <i class="fa-solid fa-paper-plane"></i>
                             Contact Me
                         </a>
-                        <button class="button button-tertiary tertiary-button" type="button" onclick="window.print()">
-                            <i class="fa-solid fa-file-arrow-down"></i>
-                            Download CV
-                        </button>
                     </div>
                     <div class="social-row" aria-label="Social links">
                         <a class="social-link" href="https://www.linkedin.com/in/nathalee-wilund-048bab143" target="_blank" rel="noreferrer" aria-label="LinkedIn">
@@ -77,11 +73,10 @@
                     </article>
                     <article class="signal-card signal-card-bottom">
                         <span class="mono">tech_stack</span>
-                        <strong>C# / .NET / Angular</strong>
                         <div class="stack-badges" aria-label="Core stack">
-                            <span>C#</span>
-                            <span>.NET</span>
-                            <span>NG</span>
+                            <span class="stack-icon" aria-label="C sharp"><img src="images/icons/C%23.svg" alt=""></span>
+                            <span class="stack-icon" aria-label="Angular"><img src="images/icons/Angular.svg" alt=""></span>
+                            <span class="stack-icon" aria-label="SQL"><img src="images/icons/SQL.svg" alt=""></span>
                         </div>
                     </article>
                 </div>
@@ -104,7 +99,7 @@
                         </div>
                     </div>
                     <div class="capability-item">
-                        <i class="fa-solid fa-coins"></i>
+                        <i class="fa-solid fa-puzzle-piece"></i>
                         <div>
                             <strong>Problem Solving</strong>
                             <span>Turning requirements into software.</span>
@@ -117,8 +112,8 @@
                             <span>Reliable, well-tested software.</span>
                         </div>
                     </div>
-                <div class="capability-item">
-                        <i class="fa-solid fa-code"></i>
+                    <div class="capability-item">
+                        <i class="fa-solid fa-people-group"></i>
                         <div>
                             <strong>Collaboration</strong>
                             <span>Clear communication and teamwork.</span>
@@ -130,8 +125,7 @@
 
             <section id="about" class="portfolio-section reveal">
                 <div class="section-heading">
-                    <p class="eyebrow">About</p>
-                    <!-- <h2>Clear systems. Thoughtful collaboration. Practical solutions.</h2> -->
+                    <h2>About</h2>
                 </div>
                 <div class="about-grid">
                     <article class="glass-card">
@@ -151,7 +145,7 @@
 
             <section id="experience" class="portfolio-section reveal">
                 <div class="section-heading">
-                    <p class="eyebrow">Experience</p>
+                    <h2>Experience</h2>
                 </div>
                 <div class="timeline">
                     <article class="timeline-card">
@@ -212,83 +206,83 @@
 
             <section id="projects" class="portfolio-section reveal">
                 <div class="section-heading">
-                    <p class="eyebrow">Projects</p>
+                    <h2>Projects</h2>
                 </div>
                 <div class="project-grid">
-                    <article class="project-card project-featured">
-                        <div class="project-visual">
-                            <div class="mock-window">
-                                <span></span><span></span><span></span>
-                            </div>
-                            <div class="mock-chart">
-                                <div class="payment-flow">
-                                    <span>OAuth2</span>
-                                    <i></i>
-                                    <span>Token Cache</span>
-                                    <i></i>
-                                    <span>Viva Provider</span>
-                                    <i></i>
-                                    <span>Payment Flow</span>
-                                </div>
-                            </div>
-                        </div>
+                    <article class="project-card project-case-card">
                         <div class="project-body">
-                            <h3>Convene Mobility - Payment Provider Integrationn</h3>
-                            <p>Implemented a production-grade Viva Payments provider integration in a .NET backend, including OAuth2 authentication, token lifecycle management, automatic refresh, and end-to-end flow validation.</p>
+                            <div class="project-meta">
+                                <span>Professional Project</span>
+                                <span>Convene Mobility</span>
+                            </div>
+                            <h3>Platform Modernization</h3>
+                            <p class="project-stack">C#, .NET, Clean Architecture, Dependency Injection, xUnit</p>
+                            <p class="project-summary">Contributed to modernizing a tightly coupled payment platform into a modular, provider-based architecture aligned with clean architecture principles.</p>
+                            <h4>Key Contributions</h4>
                             <ul class="project-highlights">
-                                <li>Implemented OAuth2 client_credentials flow with request construction, credential encoding, and JSON response mapping.</li>
-                                <li>Designed secure token handling with cached access tokens, expiry validation, and automatic refresh.</li>
-                                <li>Built HTTP integration tests using fake message handlers and xUnit flow tests.</li>
-                                <li>Debugged and validated external API behavior using Postman and request inspection.</li>
+                                <li>Refactored payment flows into decoupled provider abstractions.</li>
+                                <li>Improved separation between business logic and external integrations.</li>
+                                <li>Applied SOLID principles and dependency injection patterns.</li>
+                                <li>Added integration and validation tests to improve maintainability and reliability.</li>
                             </ul>
-                            <div class="tag-row">
-                                <span>C#</span><span>.NET</span><span>OAuth2</span><span>HttpClient</span><span>xUnit</span><span>Postman</span>
-                            </div>
                         </div>
                     </article>
 
-                    <article class="project-card">
-                        <div class="project-visual compact">
-                            <i class="fa-solid fa-diagram-project"></i>
-                        </div>
+                    <article class="project-card project-case-card">
                         <div class="project-body">
-                            <h3>Convene Mobility - Modular Integration Architecture</h3>
-                            <p>Designed and implemented a modular payment architecture using provider abstractions, enabling flexible runtime selection and easier onboarding of new PSPs.</p>
+                            <div class="project-meta">
+                                <span>Professional Project</span>
+                                <span>Convene Mobility</span>
+                            </div>
+                            <h3>Payment Provider Integration</h3>
+                            <p class="project-stack">C#, .NET, OAuth2, REST APIs, xUnit, Postman</p>
+                            <p class="project-summary">Contributed to the implementation of a production payment provider integration for Viva Payments, including authentication, token lifecycle management, and provider abstraction within a multi-provider payment architecture.</p>
+                            <h4>Key Contributions</h4>
                             <ul class="project-highlights">
-                                <li>Refactored payment flows into provider-based abstractions supporting Viva Payments, Windcave, Adyen, and Demo providers.</li>
-                                <li>Kept shared business interfaces provider-agnostic while isolating PSP-specific logic in provider layers.</li>
-                                <li>Applied clean architecture principles across orchestration, protocol handling, and integrations.</li>
+                                <li>Implemented OAuth2 client credentials authentication flow.</li>
+                                <li>Built secure token caching and automatic refresh handling.</li>
+                                <li>Integrated Viva Payments alongside existing PSP providers.</li>
+                                <li>Developed integration, flow, and validation tests using xUnit and fake handlers.</li>
                             </ul>
-                            <div class="tag-row">
-                                <span>C#</span><span>.NET</span><span>Clean Architecture</span><span>Provider Pattern</span><span>Dependency Injection</span>
-                            </div>
                         </div>
                     </article>
 
-                    <article class="project-card">
-                        <div class="project-visual compact">
-                            <i class="fa-solid fa-chart-line"></i>
-                        </div>
+                    <article class="project-card project-case-card">
                         <div class="project-body">
-                            <h3>Aire Energy - Revenue Chart</h3>
-                            <p>Implemented interactive revenue visualizations in an Angular frontend using Highcharts, making generated revenue data easier to inspect, compare, and export.</p>
-                            <div class="tag-row">
-                                <span>Angular</span><span>TypeScript</span><span>Highcharts</span><span>Data Visualization</span>
+                            <div class="project-meta">
+                                <span>Professional Project</span>
+                                <span>Aire Energy</span>
                             </div>
+                            <h3>Revenue Analytics Dashboard</h3>
+                            <p class="project-stack">C#, .NET, Angular, TypeScript, Highcharts</p>
+                            <p class="project-summary">Developed a full-stack revenue reporting feature that transformed operational data into interactive dashboards and visual business insights.</p>
+                            <h4>Key Contributions</h4>
+                            <ul class="project-highlights">
+                                <li>Built backend functionality for collecting and aggregating revenue data.</li>
+                                <li>Developed Angular components for interactive reporting views.</li>
+                                <li>Configured and customized Highcharts visualizations for business reporting.</li>
+                                <li>Implemented data retrieval, presentation, and testing workflows across the stack.</li>
+                            </ul>
                         </div>
                     </article>
 
-                    <article class="project-card">
-                        <div class="project-visual compact">
-                            <i class="fa-solid fa-book-open-reader"></i>
-                        </div>
+                    <article class="project-card project-case-card">
                         <div class="project-body">
-                            <h3> Personal project - NanyriaNest - Library Management System</h3>
-                            <p>Full-stack library management system built with .NET 8 and Angular, including JWT authentication, EF Core migrations, repository pattern, AutoMapper, and Swagger/OpenAPI documentation.</p>
-                            <div class="tag-row">
-                                <span>ASP.NET Core</span><span>Angular</span><span>SQL Server</span><span>JWT</span><span>EF Core</span>
+                            <div class="project-meta">
+                                <span>Personal Project</span>
+                                <span>Graduation Project</span>
                             </div>
-                            <a href="https://github.com/Nanyria/NyriaNest" target="_blank" rel="noreferrer">View GitHub <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                            <h3>NanyriaNest</h3>
+                            <p class="project-stack">C#, .NET 8, Angular, SQL Server, Entity Framework Core, JWT</p>
+                            <p class="project-summary">Full-stack library management system built with .NET 8 and Angular, featuring authentication, role-based access, REST APIs, and SQL Server data management.</p>
+                            <h4>Key Contributions</h4>
+                            <ul class="project-highlights">
+                                <li>Developed ASP.NET Core REST APIs for library and user management.</li>
+                                <li>Implemented JWT authentication and role-based authorization.</li>
+                                <li>Designed data access using Entity Framework Core and SQL Server.</li>
+                                <li>Built Angular frontend features for managing books, users, and loans.</li>
+                            </ul>
+                            <a class="project-link" href="https://github.com/Nanyria/NyriaNest" target="_blank" rel="noreferrer">View GitHub <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
                         </div>
                     </article>
                 </div>
@@ -296,7 +290,7 @@
 
             <section id="skills" class="portfolio-section reveal">
                 <div class="section-heading">
-                    <p class="eyebrow">Technical Skills</p>
+                    <h2>Technical Skills</h2>
                 </div>
                 <div class="skills-grid">
                     <article class="skill-card">
@@ -371,7 +365,7 @@
 
             <section id="education" class="portfolio-section reveal">
                 <div class="section-heading">
-                    <p class="eyebrow">Education</p>
+                    <h2>Education</h2>
                 </div>
                 <div class="education-grid">
                     <article class="education-card">
@@ -394,16 +388,19 @@
             </section>
 
             <section id="contact" class="portfolio-section contact-section reveal">
+                <div class="section-heading">
+                    <h2>Contact</h2>
+                </div>
                 <div class="contact-panel">
                     <div>
-                        <p class="eyebrow">Contact</p>
-                        <h2>Open to backend and full-stack opportunities.</h2>
-                        <p>If you are building payment systems, internal tools, API-heavy products, or clean .NET services, I would be happy to connect.</p>
+                        <h3>Interested in backend or full-stack development?</h3>
+                        <p>Let's connect.</p>
                     </div>
                     <div class="contact-actions">
                         <a class="button button-primary" href="mailto:nathaleewi@hotmail.com"><i class="fa-solid fa-envelope"></i>Email</a>
                         <a class="button button-secondary" href="https://www.linkedin.com/in/nathalee-wilund-048bab143" target="_blank" rel="noreferrer"><i class="fa-brands fa-linkedin"></i>LinkedIn</a>
                         <a class="button button-secondary" href="https://github.com/Nanyria" target="_blank" rel="noreferrer"><i class="fa-brands fa-github"></i>GitHub</a>
+                        <a class="button button-secondary" href="files/ResumeNathaleeWilund.pdf" download="ResumeNathaleeWilund.pdf"><i class="fa-solid fa-file-arrow-down"></i>CV</a>
                     </div>
                 </div>
             </section>

@@ -257,6 +257,13 @@ p {
     z-index: 2;
 }
 
+.hero-copy,
+.hero-insights,
+.hero-visual,
+.hero-capabilities {
+    min-width: 0;
+}
+
 .eyebrow,
 .mono {
     font-family: "JetBrains Mono", monospace;
@@ -1473,7 +1480,8 @@ h3 {
     }
 
     .hero h1 {
-        font-size: clamp(2.85rem, 15vw, 3.85rem);
+        max-width: 8ch;
+        font-size: clamp(2.75rem, 13.5vw, 3.35rem);
     }
 
     .hero-intro {
@@ -1483,38 +1491,93 @@ h3 {
     }
 
     .hero-actions .button {
-        flex: 1 1 calc(50% - 6px);
+        flex: 1 1 0;
+        width: auto;
+        min-width: 0;
+        gap: 8px;
+        padding-inline: 10px;
+        font-size: 0.94rem;
     }
 
     .contact-actions .button {
         width: 100%;
     }
 
+    .hero-copy {
+        grid-column: 1;
+        grid-row: 1;
+    }
+
+    .hero {
+        gap: 24px;
+        padding-bottom: 24px;
+        isolation: isolate;
+        z-index: 4;
+    }
+
     .hero-visual {
-        min-height: 310px;
+        grid-column: 1;
+        grid-row: 2;
+        min-height: 470px;
+        margin-top: 4px;
+        overflow: visible;
+        z-index: 1;
     }
 
     .portrait-frame {
-        width: min(300px, 100%);
-        min-height: 310px;
-        padding-inline: 14px;
+        width: 100%;
+        min-height: 470px;
+        margin-left: 0;
+        padding-inline: 0;
+        justify-items: end;
+    }
+
+    .portrait-frame::before {
+        inset: -170px -145px -150px -120px;
     }
 
     .portrait-frame img {
-        width: min(285px, 96%);
+        width: min(380px, 106%);
+        transform: translateX(28px) translateY(-148px);
     }
 
     .hero-insights {
-        padding: 18px;
+        grid-column: 1;
+        grid-row: 2;
+        align-self: start;
+        justify-self: start;
+        width: min(48%, 180px);
+        margin-top: 92px;
+        padding: 0 0 0 26px;
+        gap: 38px;
+        border: 0;
+        border-left: 1px solid rgba(249, 115, 22, 0.18);
+        background: transparent;
+        box-shadow: none;
+        z-index: 5;
     }
 
     .signal-card-top {
-        display: none;
+        display: block;
     }
 
     .signal-card-bottom {
         display: block;
         padding: 0;
+    }
+
+    .signal-card {
+        border: 0;
+        padding: 0;
+    }
+
+    .signal-card strong {
+        font-size: 1rem;
+    }
+
+    .signal-card p {
+        font-size: 0.88rem;
+        line-height: 1.55;
     }
 
     .stack-badges {
@@ -1534,6 +1597,40 @@ h3 {
     .capability-item i {
         width: 32px;
         height: 32px;
+    }
+
+    .hero-capabilities {
+        position: relative;
+        z-index: 20;
+        isolation: isolate;
+        margin-top: -108px;
+        background:
+            linear-gradient(145deg, rgba(255, 255, 255, 0.07), rgba(255, 255, 255, 0.025)),
+            rgba(17, 18, 20, 0.96);
+        box-shadow: 0 18px 54px rgba(0, 0, 0, 0.32);
+        backdrop-filter: blur(12px);
+    }
+
+    #about {
+        z-index: 5;
+        margin-top: 20px;
+        padding-top: 12px;
+    }
+
+    #about .section-heading {
+        position: relative;
+        z-index: 6;
+        transform: none;
+        margin-bottom: 20px;
+    }
+
+    #about::before {
+        content: none;
+    }
+
+    .capability-item {
+        position: relative;
+        z-index: 2;
     }
 
     .glass-card,
@@ -1583,17 +1680,19 @@ h3 {
 }
 
 @media (max-width: 420px) {
-    .hero-actions .button {
-        flex-basis: 100%;
-        width: 100%;
-    }
-
     .contact-panel {
         text-align: center;
     }
 
     .contact-actions {
         justify-content: center;
+    }
+}
+
+@media (max-width: 360px) {
+    .hero-actions .button {
+        flex-basis: 100%;
+        width: 100%;
     }
 }
 

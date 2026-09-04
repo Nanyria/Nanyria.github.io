@@ -1330,15 +1330,6 @@ h3 {
         width: min(380px, 100%);
     }
 
-    .hero-capabilities {
-        grid-template-columns: repeat(2, minmax(0, 1fr));
-        margin-top: 10px;
-    }
-
-    .hero-capabilities .eyebrow {
-        grid-column: 1 / -1;
-    }
-
     .about-grid,
     .education-grid,
     .skills-grid {
@@ -1446,12 +1437,29 @@ h3 {
 
     .hero-capabilities {
         grid-column: 1 / -1;
-        grid-template-columns: 130px repeat(4, minmax(0, 1fr));
+        grid-template-columns: repeat(auto-fit, minmax(max(230px, calc(50% - 9px)), 1fr));
+        gap: 18px;
         margin-top: -8px;
     }
 
     .hero-capabilities .eyebrow {
-        grid-column: auto;
+        grid-column: 1 / -1;
+    }
+}
+
+/* Between the 4-column desktop layout and the 1100px tablet breakpoint,
+   "Clean Architecture" wraps to a second line before the 4-column grid
+   narrows enough to fall back to @media (max-width: 1100px). Extend the
+   2-column layout to cover that gap. */
+@media (min-width: 1101px) and (max-width: 1160px) {
+    .hero-capabilities {
+        grid-column: 1 / -1;
+        grid-template-columns: repeat(auto-fit, minmax(max(230px, calc(50% - 9px)), 1fr));
+        gap: 18px;
+    }
+
+    .hero-capabilities .eyebrow {
+        grid-column: 1 / -1;
     }
 }
 
@@ -1638,7 +1646,7 @@ h3 {
 
     .hero-capabilities {
         order: 4;
-        grid-template-columns: 1fr;
+        grid-template-columns: repeat(auto-fit, minmax(max(230px, calc(50% - 9px)), 1fr));
         margin-top: -96px;
         padding: 24px;
         gap: 18px;
@@ -1663,7 +1671,7 @@ h3 {
     }
 
     .hero-capabilities .eyebrow {
-        grid-column: auto;
+        grid-column: 1 / -1;
     }
 }
 
@@ -1737,7 +1745,7 @@ h3 {
 
     .hero-capabilities {
         order: 4;
-        grid-template-columns: 1fr;
+        grid-template-columns: repeat(auto-fit, minmax(max(230px, calc(50% - 9px)), 1fr));
         gap: 18px;
         padding: 20px;
     }

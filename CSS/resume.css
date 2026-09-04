@@ -249,6 +249,7 @@ p {
         radial-gradient(circle at 73% 30%, rgba(249, 115, 22, 0.34), transparent 22%),
         radial-gradient(ellipse at 70% 44%, rgba(124, 45, 18, 0.26), transparent 36%),
         radial-gradient(circle at 18% 12%, rgba(249, 115, 22, 0.07), transparent 26%),
+        linear-gradient(to bottom, #030304 0%, rgba(3, 3, 4, 0.18) 34%, #030304 91%),
         linear-gradient(90deg, rgba(0, 0, 0, 0.72), transparent 34%, rgba(0, 0, 0, 0.78) 78%, #030304 100%);
     z-index: 0;
 }
@@ -261,7 +262,7 @@ p {
     bottom: -180px;
     height: min(470px, 50%);
     pointer-events: none;
-    background:
+    background: 
         radial-gradient(ellipse at 68% 0%, rgba(3, 3, 4, 0.76), transparent 50%),
         linear-gradient(to bottom, transparent 0%, rgba(3, 3, 4, 0.82) 34%, #030304 72%);
     z-index: 1;
@@ -451,18 +452,17 @@ h3 {
 }
 
 .hero-visual::after {
-    content: "";
+    content: none;
     position: absolute;
     left: -12%;
     right: -18%;
     bottom: 0;
-    height: 48%;
+    height: 45%;
     pointer-events: none;
     background: linear-gradient(
         to bottom,
         transparent 0%,
-        transparent 40%,
-        rgba(3, 3, 4, 0.72) 72%,
+        rgba(3, 3, 4, 0.72) 55%,
         #030304 100%
     );
     z-index: 6;
@@ -485,12 +485,13 @@ h3 {
     z-index: 3;
 }
 
+/* This is background for portrait */
 .portrait-frame::before {
     content: "";
     position: absolute;
     inset: -140px -205px -115px;
     border-radius: 999px;
-    background:
+    background:  
         radial-gradient(circle at 56% 31%, rgba(249, 115, 22, 0.58), transparent 24%),
         radial-gradient(ellipse at 54% 48%, rgba(124, 45, 18, 0.42), transparent 43%),
         radial-gradient(circle at 50% 42%, rgba(255, 237, 213, 0.06), transparent 30%),
@@ -1388,7 +1389,7 @@ h3 {
     .hero::before {
         top: -110px;
         height: calc(100% + 200px);
-        background:
+        background: 
             radial-gradient(circle at 76% 29%, rgba(249, 115, 22, 0.38), transparent 24%),
             radial-gradient(ellipse at 74% 43%, rgba(124, 45, 18, 0.3), transparent 40%),
             linear-gradient(90deg, rgba(0, 0, 0, 0.78), transparent 34%, rgba(0, 0, 0, 0.7) 84%, #030304 100%);
@@ -1518,10 +1519,15 @@ h3 {
         top: -70px;
         height: calc(100% + 120px);
         background:
+            radial-gradient(ellipse at 73% 30%, rgba(249, 115, 22, 0.22), transparent 28%),
+            radial-gradient(ellipse at 73% 46%, rgba(124, 45, 18, 0.16), transparent 44%),
             linear-gradient(to bottom, #030304 0%, rgba(3, 3, 4, 0.08) 36%, rgba(3, 3, 4, 0.42) 74%, #030304 98%),
             linear-gradient(90deg, rgba(0, 0, 0, 0.92) 0%, rgba(0, 0, 0, 0.84) 38%, transparent 58%, rgba(0, 0, 0, 0.78) 90%, #030304 100%);
     }
 
+    .hero::after {
+        content: none;
+    }
     .hero-copy {
         grid-column: 1;
         grid-row: 1;
@@ -1583,29 +1589,24 @@ h3 {
         position: absolute;
         inset: -48px -8vw -84px -8vw;
         pointer-events: none;
+        opacity: 0.36;
         background:
-            radial-gradient(ellipse at 73% 30%, rgba(249, 115, 22, 0.48), transparent 30%),
-            radial-gradient(ellipse at 73% 46%, rgba(124, 45, 18, 0.34), transparent 48%),
-            radial-gradient(circle at 73% 33%, rgba(255, 237, 213, 0.055), transparent 30%);
+            radial-gradient(ellipse at 73% 30%, rgba(249, 115, 22, 0.42), transparent 30%),
+            radial-gradient(ellipse at 73% 46%, rgba(124, 45, 18, 0.26), transparent 48%),
+            radial-gradient(circle at 73% 33%, rgba(255, 237, 213, 0.045), transparent 30%);
         filter: blur(44px);
         z-index: 0;
     }
 
+    /*bottom fade */
     .hero-visual::after {
-        content: "";
+        content: none;
         position: absolute;
         left: -8vw;
         right: -8vw;
         bottom: -1px;
         height: 42%;
         pointer-events: none;
-        background: linear-gradient(
-            to bottom,
-            transparent 0%,
-            transparent 44%,
-            rgba(3, 3, 4, 0.72) 72%,
-            #030304 100%
-        );
         z-index: 4;
     }
 
@@ -1617,7 +1618,18 @@ h3 {
     }
 
     .portrait-frame::before {
-        content: none;
+        content: "";
+        position: absolute;
+        inset: -120px -118px -90px -76px;
+        border-radius: 999px;
+        background:
+            radial-gradient(circle at 68% 24%, rgba(249, 115, 22, 0.58), transparent 22%),
+            radial-gradient(ellipse at 66% 42%, rgba(124, 45, 18, 0.42), transparent 42%),
+            radial-gradient(circle at 66% 30%, rgba(255, 237, 213, 0.06), transparent 28%),
+            radial-gradient(ellipse at 68% 90%, #030304 0%, transparent 60%);
+        filter: blur(82px);
+        z-index: -1;
+        pointer-events: none;
     }
 
     .portrait-frame img {
@@ -1841,6 +1853,8 @@ h3 {
         top: -48px;
         height: calc(100% + 90px);
         background:
+            radial-gradient(ellipse at 78% 28%, rgba(249, 115, 22, 0.18), transparent 28%),
+            radial-gradient(ellipse at 76% 46%, rgba(124, 45, 18, 0.14), transparent 44%),
             linear-gradient(to bottom, #030304 0%, rgba(3, 3, 4, 0.1) 38%, rgba(3, 3, 4, 0.44) 76%, #030304 100%),
             linear-gradient(90deg, rgba(0, 0, 0, 0.94) 0%, rgba(0, 0, 0, 0.86) 42%, transparent 66%, rgba(0, 0, 0, 0.74) 92%, #030304 100%);
     }
@@ -1857,10 +1871,11 @@ h3 {
 
     .hero-visual::before {
         inset: -40px -20px -86px -36px;
+        opacity: 0.28;
         background:
-            radial-gradient(ellipse at 78% 28%, rgba(249, 115, 22, 0.46), transparent 30%),
-            radial-gradient(ellipse at 76% 46%, rgba(124, 45, 18, 0.32), transparent 48%),
-            radial-gradient(circle at 78% 31%, rgba(255, 237, 213, 0.05), transparent 30%);
+            radial-gradient(ellipse at 78% 28%, rgba(249, 115, 22, 0.4), transparent 30%),
+            radial-gradient(ellipse at 76% 46%, rgba(124, 45, 18, 0.24), transparent 48%),
+            radial-gradient(circle at 78% 31%, rgba(255, 237, 213, 0.04), transparent 30%);
         filter: blur(34px);
     }
 
@@ -1868,6 +1883,7 @@ h3 {
         left: -24px;
         right: -24px;
         height: 48%;
+        content: none;
         background: linear-gradient(
             to bottom,
             transparent 0%,
@@ -1886,7 +1902,8 @@ h3 {
     }
 
     .portrait-frame::before {
-        content: none;
+        content: "";
+        inset: -170px -36px -150px -90px;
     }
 
     .portrait-frame img {

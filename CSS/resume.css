@@ -1521,8 +1521,7 @@ h3 {
         background:
             radial-gradient(ellipse at 73% 30%, rgba(249, 115, 22, 0.22), transparent 28%),
             radial-gradient(ellipse at 73% 46%, rgba(124, 45, 18, 0.16), transparent 44%),
-            linear-gradient(to bottom, #030304 0%, rgba(3, 3, 4, 0.08) 36%, rgba(3, 3, 4, 0.42) 74%, #030304 98%),
-            linear-gradient(90deg, rgba(0, 0, 0, 0.92) 0%, rgba(0, 0, 0, 0.84) 38%, transparent 58%, rgba(0, 0, 0, 0.78) 90%, #030304 100%);
+            linear-gradient(to bottom, #030304 0%, rgba(3, 3, 4, 0.08) 36%, rgba(3, 3, 4, 0.42) 74%, #030304 98%);
     }
 
     .hero::after {
@@ -1783,7 +1782,6 @@ h3 {
     .site-shell {
         width: calc(100vw - 20px);
         max-width: 100%;
-        overflow-x: clip;
     }
 
     .site-header {
@@ -1846,7 +1844,6 @@ h3 {
         isolation: isolate;
         z-index: 4;
         max-width: 100%;
-        overflow-x: clip;
     }
 
     .hero::before {
@@ -1855,8 +1852,7 @@ h3 {
         background:
             radial-gradient(ellipse at 78% 28%, rgba(249, 115, 22, 0.18), transparent 28%),
             radial-gradient(ellipse at 76% 46%, rgba(124, 45, 18, 0.14), transparent 44%),
-            linear-gradient(to bottom, #030304 0%, rgba(3, 3, 4, 0.1) 38%, rgba(3, 3, 4, 0.44) 76%, #030304 100%),
-            linear-gradient(90deg, rgba(0, 0, 0, 0.94) 0%, rgba(0, 0, 0, 0.86) 42%, transparent 66%, rgba(0, 0, 0, 0.74) 92%, #030304 100%);
+            linear-gradient(to bottom, #030304 0%, rgba(3, 3, 4, 0.1) 38%, rgba(3, 3, 4, 0.44) 76%, #030304 100%);
     }
 
     .hero-visual {

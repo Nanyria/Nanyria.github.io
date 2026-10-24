@@ -228,11 +228,11 @@ p {
 .hero {
     position: relative;
     display: grid;
-    grid-template-columns: minmax(0, 0.95fr) minmax(180px, 0.34fr) minmax(410px, 0.82fr);
+    grid-template-columns: minmax(0, 1fr) 180px minmax(410px, 1fr);
     gap: clamp(26px, 4vw, 48px);
     align-items: center;
     min-height: calc(100vh - 88px);
-    padding: clamp(62px, 8vw, 104px) 0 clamp(42px, 6vw, 72px);
+    padding: clamp(62px, 8vw, 104px) 0 0;
     isolation: isolate;
 }
 
@@ -687,8 +687,12 @@ h3 {
 .portfolio-section {
     position: relative;
     z-index: 3;
-    padding: clamp(36px, 4.4vw, 56px) 0;
+    padding: clamp(28px, 3.2vw, 42px) 0;
     background: #030304;
+}
+
+#about {
+    padding-top: 36px;
 }
 
 #about::before {
@@ -1370,11 +1374,11 @@ h3 {
     }
 
     .hero {
-        grid-template-columns: minmax(0, 0.9fr) minmax(135px, 0.28fr) minmax(390px, 0.92fr);
+        grid-template-columns: minmax(0, 1fr) 135px minmax(390px, 1fr);
         gap: clamp(22px, 3vw, 38px);
         align-items: center;
         min-height: auto;
-        padding: clamp(54px, 5.5vw, 76px) 0 clamp(36px, 5vw, 58px);
+        padding: clamp(54px, 5.5vw, 76px) 0 0;
     }
 
     .hero::before {
@@ -1647,7 +1651,7 @@ h3 {
     .hero-capabilities {
         order: 4;
         grid-template-columns: repeat(auto-fit, minmax(max(230px, calc(50% - 9px)), 1fr));
-        margin-top: -96px;
+        margin-top: -190px;
         padding: 24px;
         gap: 18px;
         z-index: 20;
@@ -1746,6 +1750,7 @@ h3 {
     .hero-capabilities {
         order: 4;
         grid-template-columns: repeat(auto-fit, minmax(max(230px, calc(50% - 9px)), 1fr));
+        margin-top: -256px;
         gap: 18px;
         padding: 20px;
     }
@@ -1782,7 +1787,7 @@ h3 {
     }
 
     .portfolio-section {
-        padding: 46px 0;
+        padding: 34px 0;
     }
 }
 
@@ -1801,7 +1806,7 @@ h3 {
     }
 
     .portfolio-section {
-        padding: 40px 0;
+        padding: 28px 0;
     }
 
     .brand-mark {
@@ -1848,7 +1853,6 @@ h3 {
     .hero {
         width: 100%;
         gap: 24px;
-        padding-bottom: 24px;
         isolation: isolate;
         z-index: 4;
         max-width: 100%;
@@ -1976,7 +1980,7 @@ h3 {
         position: relative;
         z-index: 20;
         isolation: isolate;
-        margin-top: -108px;
+        margin-top: -188px;
         overflow: visible;
         background: #111214;
         box-shadow: 0 18px 54px rgba(0, 0, 0, 0.32);
@@ -1990,8 +1994,7 @@ h3 {
 
     #about {
         z-index: 5;
-        margin-top: 20px;
-        padding-top: 12px;
+        padding-top: 36px;
     }
 
     #about .section-heading {
